@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="sh_web_layout" inherit_id="web.layout" name="Web layout">
+        <xpath expr="//head/meta[last()]" position="after">
+        	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+        </xpath>
+    </template>
+    <template id="ticket_dashboard_count" name="My Dashboard Count">
+        <div id="js_ticket_count_div">
+            <div>
+                <div class="row">
+                    <t t-foreach="data_dict.keys()" t-as="value">
+                        <t t-if="data_dict">
+                            <t t-foreach="data_dict[value]" t-as="v">
+                                <div class="col-lg-3 col-md-4 col-sm-12">
+                                    <div class="card card_1 custom-card" href="#">
+                                        <div class="sh-card-body dash1 badge-info" style="background-color: #445ee9;">
+                                            <div class="media">
+                                                <a class="custom" t-att-data-res_ids="v">
+                                                    <i class="fa fa-clock-o fs-20 text-white align-self-center mr-3"></i>
+                                                    <div style="display: inline-block;">
+                                                        <h3 class="mt-0"><t t-esc="len(v)" /></h3>
+                                                        <p><span t-esc="value" /></p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </t>
+                            <br />
+                        </t>
+                    </t>
+                </div>
+            </div>
+        </div>
+    </template>
+    <template id="ticket_dashboard_tbl" name="My Ticket Table">
+        <div id="js_ticket_tbl_div">
+            <div>
+                <div class="row" style="margin: 0;">
+                    <t t-if="ticket_data_dic">
+                        <t t-foreach="ticket_data_dic.keys()" t-as="ticket">
+                            <div class="col-md-12" style="margin-bottom: 20px; box-shadow: 0 0 2px rgba(0, 0, 0, 0.5); padding-left: 0 !important; padding-right: 0 !important;">
+                                <h3 style="padding: 10px; margin-top: 7px; margin-bottom: 7px;">
+                                    <b>
+                                        <span>Stage :</span>
+                                        <span t-esc="ticket" />
+                                    </b>
+                                </h3>
+                                <div class="table-responsive">
+                                <table class="table" style="margin-bottom: 0.5rem;">
+                                    <tr>
+                                        <th>Ticket No</th>
+                                        <th>Customer Name</th>
+                                        <th>Create Date</th>
+                                        <th>Last Update Date</th>
+                                        <th>Assign User</th>
+                                        <th>Action</th>
+                                    </tr>
+                                    <t t-if="len(ticket_data_dic[ticket])==0">
+                                        <tr>
+                                            <td colspan="6">
+                                                Data not available.
+                                            </td>
+                                        </tr>
+                                    </t>
+                                    <t t-if="len(ticket_data_dic[ticket])&gt;0">
+                                        <tr t-foreach="ticket_data_dic[ticket]" t-as="order">
+                                            <td>
+                                                <a t-att-href="'/web#id=%s&amp;view_type=form&amp;model=helpdesk.ticket' % (order.get('ticket_id'))" target="_blank"><span t-esc="order.get('ticket_no')" /></a>
+                                            </td>
+                                            <td><span t-esc="order.get('partner_id')" /></td>
+                                            <td><span t-esc="order.get('create_date')" /></td>
+                                            <td><span t-esc="order.get('write_date')" /></td>
+                                            <td><span t-esc="order.get('user_id')" /></td>
+                                            <td>
+                                                <a style="cursor: pointer;" class="btn-success" t-att-href="'/web#id=%s&amp;view_type=form&amp;model=helpdesk.ticket' % (order.get('ticket_id'))" target="_blank">
+                                                    <i class="fa fa-eye" />
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </table>
+                                </div>
+                            </div>
+                            <br />
+                        </t>
+                    </t>
+                </div>
+            </div>
+        </div>
+    </template>
+</odoo>

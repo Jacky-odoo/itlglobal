@@ -1,0 +1,1 @@
+    sh_lead_id = fields.Many2one("crm.lead", string="Lead")

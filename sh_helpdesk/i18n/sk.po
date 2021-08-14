@@ -1,0 +1,2890 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sh_helpdesk
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-12-22 10:05+0000\n"
+"PO-Revision-Date: 2020-12-22 10:05+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sh_helpdesk
+#: model:mail.template,subject:sh_helpdesk.sh_ticket_user_allocation_template
+msgid ""
+"${object.company_id.name} Ticket is assign to user (Ref ${object.name or "
+"'n/a' })"
+msgstr ""
+"${object.company_id.name} Ticket je priradený užívateľovi (Ref ${object.name or "
+"'n/a' })"
+
+#. module: sh_helpdesk
+#: model:mail.template,subject:sh_helpdesk.sh_ticket_new_template
+msgid ""
+"${object.company_id.name} Your Ticket is generated (Ref ${object.name or "
+"'n/a' })"
+msgstr ""
+"${object.company_id.name} Váš ticket je vygenerovaný (Ref ${object.name or "
+"'n/a' })"
+
+#. module: sh_helpdesk
+#: model:mail.template,subject:sh_helpdesk.sh_ticket_cancelled_template
+msgid ""
+"${object.company_id.name} Your ticket is cancelled (Ref ${object.name or "
+"'n/a' })"
+msgstr ""
+"${object.company_id.name} Váš ticket bol zrušený (Ref ${object.name or "
+"'n/a' })"
+
+#. module: sh_helpdesk
+#: model:mail.template,subject:sh_helpdesk.sh_ticket_closed_template
+msgid ""
+"${object.company_id.name} Your ticket is closed (Ref ${object.name or 'n/a' "
+"})"
+msgstr ""
+"${object.company_id.name} Váš ticket je uzavretý (Ref ${object.name or 'n/a' "
+"})"
+
+#. module: sh_helpdesk
+#: model:mail.template,subject:sh_helpdesk.sh_ticket_reopened_template
+msgid ""
+"${object.company_id.name} Your ticket is re-opened (Ref ${object.name or "
+"'n/a' })"
+msgstr ""
+"${object.company_id.name} Váš ticket je znovu otvorený (Ref ${object.name or "
+"'n/a' })"
+
+#. module: sh_helpdesk
+#: model:mail.template,subject:sh_helpdesk.sh_ticket_done_template
+msgid ""
+"${object.company_id.name} Your ticket is resolved (Ref ${object.name or "
+"'n/a' })"
+msgstr ""
+"${object.company_id.name} Váš ticket je vyriešený (Ref ${object.name or "
+"'n/a' })"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.portal_my_tickets
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.ticket_feedback_thank_you
+msgid "&amp;times;"
+msgstr "&amp;krát;"
+
+#. module: sh_helpdesk
+#: model:mail.template,body_html:sh_helpdesk.sh_ticket_reopened_template
+msgid ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"\t\t\t\t\n"
+"\t\t\t\t\n"
+"\t\t\t\t<table border=\"0\" width=\"100%\" cellpadding=\"0\" bgcolor=\"#ededed\" style=\"padding: 20px; background-color: #ededed; border-collapse:separate;\" summary=\"o_mail_notification\">\n"
+"                    <tbody>\n"
+"\n"
+"                      <!-- HEADER -->\n"
+"                      <tr>\n"
+"                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                          <table width=\"590\" border=\"0\" cellpadding=\"0\" bgcolor=\"#875A7B\" style=\"min-width: 590px; background-color: rgb(135,90,123); padding: 20px; border-collapse:separate;\">\n"
+"                            <tr>\n"
+"                              <td valign=\"middle\">\n"
+"                                  <span style=\"font-size:20px; color:white; font-weight: bold;\">\n"
+"                                      ${object.name}\n"
+"                                  </span>\n"
+"                              </td>\n"
+"                              <td valign=\"middle\" align=\"right\">\n"
+"                                  <img src=\"/logo.png?company=${object.company_id.id}\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${object.company_id.name}\"/>\n"
+"                              </td>\n"
+"                            </tr>\n"
+"                          </table>\n"
+"                        </td>\n"
+"                      </tr>\n"
+"\n"
+"                      <!-- CONTENT -->\n"
+"                      <tr>\n"
+"                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                          <table width=\"590\" border=\"0\" cellpadding=\"0\" bgcolor=\"#ffffff\" style=\"min-width: 590px; background-color: rgb(255, 255, 255); padding: 20px; border-collapse:separate;\">\n"
+"                            <tbody>\n"
+"                              <td valign=\"top\" style=\"font-family:Arial,Helvetica,sans-serif; color: #555; font-size: 14px;\">\n"
+"                              \t<p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"\t\t\t\t\t\t\t    \tDobrý deň ${object.partner_id.name} Váš ticket je znovu otvorený,\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\tOzveme sa čo najskôr.\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<center>\n"
+"\t\t\t\t\t\t\t\t\t\t<a href=\"/my/tickets/${object.id}\" style=\"background-color: #1abc9c; padding: 10px; text-decoration: none; color: #fff; border-radius: 5px; font-size: 16px;\" class=\"o_default_snippet_text\">Zobraziť ticket</a>\n"
+"\t\t\t\t\t\t\t\t\t</center>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t    </p>\n"
+"                              </td>\n"
+"                            </tbody>\n"
+"                          </table>\n"
+"                        </td>\n"
+"                      </tr>\n"
+"\n"
+"                      <!-- FOOTER -->\n"
+"                      <tr>\n"
+"                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                          <table width=\"590\" border=\"0\" cellpadding=\"0\" bgcolor=\"#875A7B\" style=\"min-width: 590px; background-color: rgb(135,90,123); padding: 20px; border-collapse:separate;\">\n"
+"                            <tr>\n"
+"                              <td valign=\"middle\" align=\"left\" style=\"color: #fff; padding-top: 10px; padding-bottom: 10px; font-size: 12px;\">\n"
+"                                ${object.company_id.name}<br/>\n"
+"                                ${object.company_id.phone or ''}\n"
+"                              </td>\n"
+"                              <td valign=\"middle\" align=\"right\" style=\"color: #fff; padding-top: 10px; padding-bottom: 10px; font-size: 12px;\">\n"
+"                                % if object.company_id.email:\n"
+"                                <a href=\"mailto:${object.company_id.email}\" style=\"text-decoration:none; color: white;\">${object.company_id.email}</a><br/>\n"
+"                                % endif\n"
+"                                % if object.company_id.website:\n"
+"                                    <a href=\"${object.company_id.website}\" style=\"text-decoration:none; color: white;\">\n"
+"                                        ${object.company_id.website}\n"
+"                                    </a>\n"
+"                                % endif\n"
+"                              </td>\n"
+"                            </tr>\n"
+"                          </table>\n"
+"                        </td>\n"
+"                      </tr>\n"
+"                    </tbody>\n"
+"                </table>\n"
+"\t\t\t\t\n"
+"\t\t\t\t\n"
+"\t\t\t</div>\n"
+"            "
+msgstr ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"\t\t\t\t\n"
+"\t\t\t\t\n"
+"\t\t\t\t<table border=\"0\" width=\"100%\" cellpadding=\"0\" bgcolor=\"#ededed\" style=\"padding: 20px; background-color: #ededed; border-collapse:separate;\" summary=\"o_mail_notification\">\n"
+"                    <tbody>\n"
+"\n"
+"                      <!-- HEADER -->\n"
+"                      <tr>\n"
+"                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                          <table width=\"590\" border=\"0\" cellpadding=\"0\" bgcolor=\"#875A7B\" style=\"min-width: 590px; background-color: rgb(135,90,123); padding: 20px; border-collapse:separate;\">\n"
+"                            <tr>\n"
+"                              <td valign=\"middle\">\n"
+"                                  <span style=\"font-size:20px; color:white; font-weight: bold;\">\n"
+"                                      ${object.name}\n"
+"                                  </span>\n"
+"                              </td>\n"
+"                              <td valign=\"middle\" align=\"right\">\n"
+"                                  <img src=\"/logo.png?company=${object.company_id.id}\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${object.company_id.name}\"/>\n"
+"                              </td>\n"
+"                            </tr>\n"
+"                          </table>\n"
+"                        </td>\n"
+"                      </tr>\n"
+"\n"
+"                      <!-- CONTENT -->\n"
+"                      <tr>\n"
+"                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                          <table width=\"590\" border=\"0\" cellpadding=\"0\" bgcolor=\"#ffffff\" style=\"min-width: 590px; background-color: rgb(255, 255, 255); padding: 20px; border-collapse:separate;\">\n"
+"                            <tbody>\n"
+"                              <td valign=\"top\" style=\"font-family:Arial,Helvetica,sans-serif; color: #555; font-size: 14px;\">\n"
+"                              \t<p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"\t\t\t\t\t\t\t    \tDobrý deň ${object.partner_id.name} Váš ticket je znovu otvorený,\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\tOzveme sa čo najskôr.\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<center>\n"
+"\t\t\t\t\t\t\t\t\t\t<a href=\"/my/tickets/${object.id}\" style=\"background-color: #1abc9c; padding: 10px; text-decoration: none; color: #fff; border-radius: 5px; font-size: 16px;\" class=\"o_default_snippet_text\">Zobraziť ticket</a>\n"
+"\t\t\t\t\t\t\t\t\t</center>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t    </p>\n"
+"                              </td>\n"
+"                            </tbody>\n"
+"                          </table>\n"
+"                        </td>\n"
+"                      </tr>\n"
+"\n"
+"                      <!-- FOOTER -->\n"
+"                      <tr>\n"
+"                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                          <table width=\"590\" border=\"0\" cellpadding=\"0\" bgcolor=\"#875A7B\" style=\"min-width: 590px; background-color: rgb(135,90,123); padding: 20px; border-collapse:separate;\">\n"
+"                            <tr>\n"
+"                              <td valign=\"middle\" align=\"left\" style=\"color: #fff; padding-top: 10px; padding-bottom: 10px; font-size: 12px;\">\n"
+"                                ${object.company_id.name}<br/>\n"
+"                                ${object.company_id.phone or ''}\n"
+"                              </td>\n"
+"                              <td valign=\"middle\" align=\"right\" style=\"color: #fff; padding-top: 10px; padding-bottom: 10px; font-size: 12px;\">\n"
+"                                % if object.company_id.email:\n"
+"                                <a href=\"mailto:${object.company_id.email}\" style=\"text-decoration:none; color: white;\">${object.company_id.email}</a><br/>\n"
+"                                % endif\n"
+"                                % if object.company_id.website:\n"
+"                                    <a href=\"${object.company_id.website}\" style=\"text-decoration:none; color: white;\">\n"
+"                                        ${object.company_id.website}\n"
+"                                    </a>\n"
+"                                % endif\n"
+"                              </td>\n"
+"                            </tr>\n"
+"                          </table>\n"
+"                        </td>\n"
+"                      </tr>\n"
+"                    </tbody>\n"
+"                </table>\n"
+"\t\t\t\t\n"
+"\t\t\t\t\n"
+"\t\t\t</div>\n"
+"            "
+
+#. module: sh_helpdesk
+#: model:mail.template,body_html:sh_helpdesk.sh_ticket_closed_template
+msgid ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"\t\t\t\t<table border=\"0\" width=\"100%\" cellpadding=\"0\" bgcolor=\"#ededed\" style=\"padding: 20px; background-color: #ededed; border-collapse:separate;\" summary=\"o_mail_notification\">\n"
+"                    <tbody>\n"
+"\n"
+"                      <!-- HEADER -->\n"
+"                      <tr>\n"
+"                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                          <table width=\"590\" border=\"0\" cellpadding=\"0\" bgcolor=\"#875A7B\" style=\"min-width: 590px; background-color: rgb(135,90,123); padding: 20px; border-collapse:separate;\">\n"
+"                            <tr>\n"
+"                              <td valign=\"middle\">\n"
+"                                  <span style=\"font-size:20px; color:white; font-weight: bold;\">\n"
+"                                      ${object.name}\n"
+"                                  </span>\n"
+"                              </td>\n"
+"                              <td valign=\"middle\" align=\"right\">\n"
+"                                  <img src=\"/logo.png?company=${object.company_id.id}\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${object.company_id.name}\"/>\n"
+"                              </td>\n"
+"                            </tr>\n"
+"                          </table>\n"
+"                        </td>\n"
+"                      </tr>\n"
+"\n"
+"                      <!-- CONTENT -->\n"
+"                      <tr>\n"
+"                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                          <table width=\"590\" border=\"0\" cellpadding=\"0\" bgcolor=\"#ffffff\" style=\"min-width: 590px; background-color: rgb(255, 255, 255); padding: 20px; border-collapse:separate;\">\n"
+"                            <tbody>\n"
+"                              <td valign=\"top\" style=\"font-family:Arial,Helvetica,sans-serif; color: #555; font-size: 14px;\">\n"
+"                              \t<p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"\t\t\t\t\t\t\t\t\tDobrý deň ${object.partner_id.name},\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\tVáš ticket je nateraz uzavretý. Ak chcete toicket znovu otvoriť, pošlite svoju odpoveď na tento mail.\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\tRadi by sme dostali vašu spätnú väzbu k podpore.\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<center>\n"
+"\t\t\t\t\t\t\t\t\t\t<a href=\"/ticket/feedback/${object.id}\" style=\"background-color: #1abc9c; padding: 10px; text-decoration: none; color: #fff; border-radius: 5px; font-size: 16px;\" class=\"o_default_snippet_text\">Dajte nám spätnú väzbu</a>\n"
+"\t\t\t\t\t\t\t\t\t</center>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t    </p>\n"
+"                              </td>\n"
+"                            </tbody>\n"
+"                          </table>\n"
+"                        </td>\n"
+"                      </tr>\n"
+"\n"
+"                      <!-- FOOTER -->\n"
+"                      <tr>\n"
+"                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                          <table width=\"590\" border=\"0\" cellpadding=\"0\" bgcolor=\"#875A7B\" style=\"min-width: 590px; background-color: rgb(135,90,123); padding: 20px; border-collapse:separate;\">\n"
+"                            <tr>\n"
+"                              <td valign=\"middle\" align=\"left\" style=\"color: #fff; padding-top: 10px; padding-bottom: 10px; font-size: 12px;\">\n"
+"                                ${object.company_id.name}<br/>\n"
+"                                ${object.company_id.phone or ''}\n"
+"                              </td>\n"
+"                              <td valign=\"middle\" align=\"right\" style=\"color: #fff; padding-top: 10px; padding-bottom: 10px; font-size: 12px;\">\n"
+"                                % if object.company_id.email:\n"
+"                                <a href=\"mailto:${object.company_id.email}\" style=\"text-decoration:none; color: white;\">${object.company_id.email}</a><br/>\n"
+"                                % endif\n"
+"                                % if object.company_id.website:\n"
+"                                    <a href=\"${object.company_id.website}\" style=\"text-decoration:none; color: white;\">\n"
+"                                        ${object.company_id.website}\n"
+"                                    </a>\n"
+"                                % endif\n"
+"                              </td>\n"
+"                            </tr>\n"
+"                          </table>\n"
+"                        </td>\n"
+"                      </tr>\n"
+"                    </tbody>\n"
+"                </table>\n"
+"\t\t\t</div>\n"
+"            "
+msgstr ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"\t\t\t\t<table border=\"0\" width=\"100%\" cellpadding=\"0\" bgcolor=\"#ededed\" style=\"padding: 20px; background-color: #ededed; border-collapse:separate;\" summary=\"o_mail_notification\">\n"
+"                    <tbody>\n"
+"\n"
+"                      <!-- HEADER -->\n"
+"                      <tr>\n"
+"                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                          <table width=\"590\" border=\"0\" cellpadding=\"0\" bgcolor=\"#875A7B\" style=\"min-width: 590px; background-color: rgb(135,90,123); padding: 20px; border-collapse:separate;\">\n"
+"                            <tr>\n"
+"                              <td valign=\"middle\">\n"
+"                                  <span style=\"font-size:20px; color:white; font-weight: bold;\">\n"
+"                                      ${object.name}\n"
+"                                  </span>\n"
+"                              </td>\n"
+"                              <td valign=\"middle\" align=\"right\">\n"
+"                                  <img src=\"/logo.png?company=${object.company_id.id}\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${object.company_id.name}\"/>\n"
+"                              </td>\n"
+"                            </tr>\n"
+"                          </table>\n"
+"                        </td>\n"
+"                      </tr>\n"
+"\n"
+"                      <!-- CONTENT -->\n"
+"                      <tr>\n"
+"                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                          <table width=\"590\" border=\"0\" cellpadding=\"0\" bgcolor=\"#ffffff\" style=\"min-width: 590px; background-color: rgb(255, 255, 255); padding: 20px; border-collapse:separate;\">\n"
+"                            <tbody>\n"
+"                              <td valign=\"top\" style=\"font-family:Arial,Helvetica,sans-serif; color: #555; font-size: 14px;\">\n"
+"                              \t<p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"\t\t\t\t\t\t\t\t\tDobrý deň ${object.partner_id.name},\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\tVáš ticket je nateraz uzavretý, ak ho chcete znovu otvoriť odpovedzte prosím na tento mail.\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\tRadi by sme dostali vašu spätnú väzbu k podpore.\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<center>\n"
+"\t\t\t\t\t\t\t\t\t\t<a href=\"/ticket/feedback/${object.id}\" style=\"background-color: #1abc9c; padding: 10px; text-decoration: none; color: #fff; border-radius: 5px; font-size: 16px;\" class=\"o_default_snippet_text\">Dajte nám spätnú väzbu</a>\n"
+"\t\t\t\t\t\t\t\t\t</center>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t    </p>\n"
+"                              </td>\n"
+"                            </tbody>\n"
+"                          </table>\n"
+"                        </td>\n"
+"                      </tr>\n"
+"\n"
+"                      <!-- FOOTER -->\n"
+"                      <tr>\n"
+"                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                          <table width=\"590\" border=\"0\" cellpadding=\"0\" bgcolor=\"#875A7B\" style=\"min-width: 590px; background-color: rgb(135,90,123); padding: 20px; border-collapse:separate;\">\n"
+"                            <tr>\n"
+"                              <td valign=\"middle\" align=\"left\" style=\"color: #fff; padding-top: 10px; padding-bottom: 10px; font-size: 12px;\">\n"
+"                                ${object.company_id.name}<br/>\n"
+"                                ${object.company_id.phone or ''}\n"
+"                              </td>\n"
+"                              <td valign=\"middle\" align=\"right\" style=\"color: #fff; padding-top: 10px; padding-bottom: 10px; font-size: 12px;\">\n"
+"                                % if object.company_id.email:\n"
+"                                <a href=\"mailto:${object.company_id.email}\" style=\"text-decoration:none; color: white;\">${object.company_id.email}</a><br/>\n"
+"                                % endif\n"
+"                                % if object.company_id.website:\n"
+"                                    <a href=\"${object.company_id.website}\" style=\"text-decoration:none; color: white;\">\n"
+"                                        ${object.company_id.website}\n"
+"                                    </a>\n"
+"                                % endif\n"
+"                              </td>\n"
+"                            </tr>\n"
+"                          </table>\n"
+"                        </td>\n"
+"                      </tr>\n"
+"                    </tbody>\n"
+"                </table>\n"
+"\t\t\t</div>\n"
+"            "
+
+#. module: sh_helpdesk
+#: model:mail.template,body_html:sh_helpdesk.sh_ticket_new_template
+msgid ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"\t\t\t\t<table border=\"0\" width=\"100%\" cellpadding=\"0\" bgcolor=\"#ededed\" style=\"padding: 20px; background-color: #ededed; border-collapse:separate;\" summary=\"o_mail_notification\">\n"
+"                    <tbody>\n"
+"\n"
+"                      <!-- HEADER -->\n"
+"                      <tr>\n"
+"                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                          <table width=\"590\" border=\"0\" cellpadding=\"0\" bgcolor=\"#875A7B\" style=\"min-width: 590px; background-color: rgb(135,90,123); padding: 20px; border-collapse:separate;\">\n"
+"                            <tr>\n"
+"                              <td valign=\"middle\">\n"
+"                                  <span style=\"font-size:20px; color:white; font-weight: bold;\">\n"
+"                                      ${object.name}\n"
+"                                  </span>\n"
+"                              </td>\n"
+"                              <td valign=\"middle\" align=\"right\">\n"
+"                                  <img src=\"/logo.png?company=${object.company_id.id}\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${object.company_id.name}\"/>\n"
+"                              </td>\n"
+"                            </tr>\n"
+"                          </table>\n"
+"                        </td>\n"
+"                      </tr>\n"
+"\n"
+"                      <!-- CONTENT -->\n"
+"                      <tr>\n"
+"                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                          <table width=\"590\" border=\"0\" cellpadding=\"0\" bgcolor=\"#ffffff\" style=\"min-width: 590px; background-color: rgb(255, 255, 255); padding: 20px; border-collapse:separate;\">\n"
+"                            <tbody>\n"
+"                              <td valign=\"top\" style=\"font-family:Arial,Helvetica,sans-serif; color: #555; font-size: 14px;\">\n"
+"                                <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"\t\t\t\t\t\t\t    \tDobrý deň ${object.partner_id.name} Dostali sme vašu požiadavku.\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\tNáš tím podpory vás bude čo najskôr kontaktovať.\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<center>\n"
+"\t\t\t\t\t\t\t\t\t\t<a href=\"${object.get_portal_url()}\" style=\"background-color: #1abc9c; padding: 10px; text-decoration: none; color: #fff; border-radius: 5px; font-size: 16px;\" class=\"o_default_snippet_text\">Zobraziť ticket</a>\n"
+"\t\t\t\t\t\t\t\t\t</center>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t    </p>\n"
+"                              </td>\n"
+"                            </tbody>\n"
+"                          </table>\n"
+"                        </td>\n"
+"                      </tr>\n"
+"\n"
+"                      <!-- FOOTER -->\n"
+"                      <tr>\n"
+"                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                          <table width=\"590\" border=\"0\" cellpadding=\"0\" bgcolor=\"#875A7B\" style=\"min-width: 590px; background-color: rgb(135,90,123); padding: 20px; border-collapse:separate;\">\n"
+"                            <tr>\n"
+"                              <td valign=\"middle\" align=\"left\" style=\"color: #fff; padding-top: 10px; padding-bottom: 10px; font-size: 12px;\">\n"
+"                                ${object.company_id.name}<br/>\n"
+"                                ${object.company_id.phone or ''}\n"
+"                              </td>\n"
+"                              <td valign=\"middle\" align=\"right\" style=\"color: #fff; padding-top: 10px; padding-bottom: 10px; font-size: 12px;\">\n"
+"                                % if object.company_id.email:\n"
+"                                <a href=\"mailto:${object.company_id.email}\" style=\"text-decoration:none; color: white;\">${object.company_id.email}</a><br/>\n"
+"                                % endif\n"
+"                                % if object.company_id.website:\n"
+"                                    <a href=\"${object.company_id.website}\" style=\"text-decoration:none; color: white;\">\n"
+"                                        ${object.company_id.website}\n"
+"                                    </a>\n"
+"                                % endif\n"
+"                              </td>\n"
+"                            </tr>\n"
+"                          </table>\n"
+"                        </td>\n"
+"                      </tr>\n"
+"                    </tbody>\n"
+"                </table>\n"
+"\t\t\t</div>\n"
+"            "
+msgstr ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"\t\t\t\t<table border=\"0\" width=\"100%\" cellpadding=\"0\" bgcolor=\"#ededed\" style=\"padding: 20px; background-color: #ededed; border-collapse:separate;\" summary=\"o_mail_notification\">\n"
+"                    <tbody>\n"
+"\n"
+"                      <!-- HEADER -->\n"
+"                      <tr>\n"
+"                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                          <table width=\"590\" border=\"0\" cellpadding=\"0\" bgcolor=\"#875A7B\" style=\"min-width: 590px; background-color: rgb(135,90,123); padding: 20px; border-collapse:separate;\">\n"
+"                            <tr>\n"
+"                              <td valign=\"middle\">\n"
+"                                  <span style=\"font-size:20px; color:white; font-weight: bold;\">\n"
+"                                      ${object.name}\n"
+"                                  </span>\n"
+"                              </td>\n"
+"                              <td valign=\"middle\" align=\"right\">\n"
+"                                  <img src=\"/logo.png?company=${object.company_id.id}\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${object.company_id.name}\"/>\n"
+"                              </td>\n"
+"                            </tr>\n"
+"                          </table>\n"
+"                        </td>\n"
+"                      </tr>\n"
+"\n"
+"                      <!-- CONTENT -->\n"
+"                      <tr>\n"
+"                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                          <table width=\"590\" border=\"0\" cellpadding=\"0\" bgcolor=\"#ffffff\" style=\"min-width: 590px; background-color: rgb(255, 255, 255); padding: 20px; border-collapse:separate;\">\n"
+"                            <tbody>\n"
+"                              <td valign=\"top\" style=\"font-family:Arial,Helvetica,sans-serif; color: #555; font-size: 14px;\">\n"
+"                                <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"\t\t\t\t\t\t\t    \tDobrý deň ${object.partner_id.name} Dostali sme vašu požiadavku.\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\tNáš tím podpory vás bude čo najskôr kontaktovať.\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<center>\n"
+"\t\t\t\t\t\t\t\t\t\t<a href=\"${object.get_portal_url()}\" style=\"background-color: #1abc9c; padding: 10px; text-decoration: none; color: #fff; border-radius: 5px; font-size: 16px;\" class=\"o_default_snippet_text\">Zobraziť ticket</a>\n"
+"\t\t\t\t\t\t\t\t\t</center>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t    </p>\n"
+"                              </td>\n"
+"                            </tbody>\n"
+"                          </table>\n"
+"                        </td>\n"
+"                      </tr>\n"
+"\n"
+"                      <!-- FOOTER -->\n"
+"                      <tr>\n"
+"                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                          <table width=\"590\" border=\"0\" cellpadding=\"0\" bgcolor=\"#875A7B\" style=\"min-width: 590px; background-color: rgb(135,90,123); padding: 20px; border-collapse:separate;\">\n"
+"                            <tr>\n"
+"                              <td valign=\"middle\" align=\"left\" style=\"color: #fff; padding-top: 10px; padding-bottom: 10px; font-size: 12px;\">\n"
+"                                ${object.company_id.name}<br/>\n"
+"                                ${object.company_id.phone or ''}\n"
+"                              </td>\n"
+"                              <td valign=\"middle\" align=\"right\" style=\"color: #fff; padding-top: 10px; padding-bottom: 10px; font-size: 12px;\">\n"
+"                                % if object.company_id.email:\n"
+"                                <a href=\"mailto:${object.company_id.email}\" style=\"text-decoration:none; color: white;\">${object.company_id.email}</a><br/>\n"
+"                                % endif\n"
+"                                % if object.company_id.website:\n"
+"                                    <a href=\"${object.company_id.website}\" style=\"text-decoration:none; color: white;\">\n"
+"                                        ${object.company_id.website}\n"
+"                                    </a>\n"
+"                                % endif\n"
+"                              </td>\n"
+"                            </tr>\n"
+"                          </table>\n"
+"                        </td>\n"
+"                      </tr>\n"
+"                    </tbody>\n"
+"                </table>\n"
+"\t\t\t</div>\n"
+"            "
+
+#. module: sh_helpdesk
+#: model:mail.template,body_html:sh_helpdesk.sh_ticket_user_allocation_template
+msgid ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"\t\t\t\n"
+"\t\t\t\t<table border=\"0\" width=\"100%\" cellpadding=\"0\" bgcolor=\"#ededed\" style=\"padding: 20px; background-color: #ededed; border-collapse:separate;\" summary=\"o_mail_notification\">\n"
+"                    <tbody>\n"
+"\n"
+"                      <!-- HEADER -->\n"
+"                      <tr>\n"
+"                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                          <table width=\"590\" border=\"0\" cellpadding=\"0\" bgcolor=\"#875A7B\" style=\"min-width: 590px; background-color: rgb(135,90,123); padding: 20px; border-collapse:separate;\">\n"
+"                            <tr>\n"
+"                              <td valign=\"middle\">\n"
+"                                  <span style=\"font-size:20px; color:white; font-weight: bold;\">\n"
+"                                      ${object.name}\n"
+"                                  </span>\n"
+"                              </td>\n"
+"                              <td valign=\"middle\" align=\"right\">\n"
+"                                  <img src=\"/logo.png?company=${object.company_id.id}\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${object.company_id.name}\"/>\n"
+"                              </td>\n"
+"                            </tr>\n"
+"                          </table>\n"
+"                        </td>\n"
+"                      </tr>\n"
+"\n"
+"                      <!-- CONTENT -->\n"
+"                      <tr>\n"
+"                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                          <table width=\"590\" border=\"0\" cellpadding=\"0\" bgcolor=\"#ffffff\" style=\"min-width: 590px; background-color: rgb(255, 255, 255); padding: 20px; border-collapse:separate;\">\n"
+"                            <tbody>\n"
+"                              <td valign=\"top\" style=\"font-family:Arial,Helvetica,sans-serif; color: #555; font-size: 14px;\">\n"
+"                              \t<p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"\t\t\t\t\t\t\t\t\tOd zákazníka sme dostali nový ticket.\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\tProsím, skontrolujte to čo najskôr.\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<center>\n"
+"\t\t\t\t\t\t\t        \t<a href=\"${object.form_url}\" style=\"background-color: #1abc9c; padding: 10px; text-decoration: none; color: #fff; border-radius: 5px; font-size: 16px;\" class=\"o_default_snippet_text\">Zobraziť ticket</a>\n"
+"\t\t\t\t\t\t\t        </center>\n"
+"\t\t\t\t\t\t\t        <br/>\n"
+"\t\t\t\t\t\t\t        <br/>\n"
+"\t\t\t\t\t\t\t    </p>\n"
+"                              </td>\n"
+"                            </tbody>\n"
+"                          </table>\n"
+"                        </td>\n"
+"                      </tr>\n"
+"\n"
+"                      <!-- FOOTER -->\n"
+"                      <tr>\n"
+"                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                          <table width=\"590\" border=\"0\" cellpadding=\"0\" bgcolor=\"#875A7B\" style=\"min-width: 590px; background-color: rgb(135,90,123); padding: 20px; border-collapse:separate;\">\n"
+"                            <tr>\n"
+"                              <td valign=\"middle\" align=\"left\" style=\"color: #fff; padding-top: 10px; padding-bottom: 10px; font-size: 12px;\">\n"
+"                                ${object.company_id.name}<br/>\n"
+"                                ${object.company_id.phone or ''}\n"
+"                              </td>\n"
+"                              <td valign=\"middle\" align=\"right\" style=\"color: #fff; padding-top: 10px; padding-bottom: 10px; font-size: 12px;\">\n"
+"                                % if object.company_id.email:\n"
+"                                <a href=\"mailto:${object.company_id.email}\" style=\"text-decoration:none; color: white;\">${object.company_id.email}</a><br/>\n"
+"                                % endif\n"
+"                                % if object.company_id.website:\n"
+"                                    <a href=\"${object.company_id.website}\" style=\"text-decoration:none; color: white;\">\n"
+"                                        ${object.company_id.website}\n"
+"                                    </a>\n"
+"                                % endif\n"
+"                              </td>\n"
+"                            </tr>\n"
+"                          </table>\n"
+"                        </td>\n"
+"                      </tr>\n"
+"                    </tbody>\n"
+"                </table>\n"
+"\t\t\t\n"
+"\t\t\t</div>\n"
+"            "
+msgstr ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"\t\t\t\n"
+"\t\t\t\t<table border=\"0\" width=\"100%\" cellpadding=\"0\" bgcolor=\"#ededed\" style=\"padding: 20px; background-color: #ededed; border-collapse:separate;\" summary=\"o_mail_notification\">\n"
+"                    <tbody>\n"
+"\n"
+"                      <!-- HEADER -->\n"
+"                      <tr>\n"
+"                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                          <table width=\"590\" border=\"0\" cellpadding=\"0\" bgcolor=\"#875A7B\" style=\"min-width: 590px; background-color: rgb(135,90,123); padding: 20px; border-collapse:separate;\">\n"
+"                            <tr>\n"
+"                              <td valign=\"middle\">\n"
+"                                  <span style=\"font-size:20px; color:white; font-weight: bold;\">\n"
+"                                      ${object.name}\n"
+"                                  </span>\n"
+"                              </td>\n"
+"                              <td valign=\"middle\" align=\"right\">\n"
+"                                  <img src=\"/logo.png?company=${object.company_id.id}\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${object.company_id.name}\"/>\n"
+"                              </td>\n"
+"                            </tr>\n"
+"                          </table>\n"
+"                        </td>\n"
+"                      </tr>\n"
+"\n"
+"                      <!-- CONTENT -->\n"
+"                      <tr>\n"
+"                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                          <table width=\"590\" border=\"0\" cellpadding=\"0\" bgcolor=\"#ffffff\" style=\"min-width: 590px; background-color: rgb(255, 255, 255); padding: 20px; border-collapse:separate;\">\n"
+"                            <tbody>\n"
+"                              <td valign=\"top\" style=\"font-family:Arial,Helvetica,sans-serif; color: #555; font-size: 14px;\">\n"
+"                              \t<p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"\t\t\t\t\t\t\t\t\tOd zákazníka sme dostali nový ticket.\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\tProsím, skontrolujte to čo najskôr.\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<center>\n"
+"\t\t\t\t\t\t\t        \t<a href=\"${object.form_url}\" style=\"background-color: #1abc9c; padding: 10px; text-decoration: none; color: #fff; border-radius: 5px; font-size: 16px;\" class=\"o_default_snippet_text\">Zobraziť ticket</a>\n"
+"\t\t\t\t\t\t\t        </center>\n"
+"\t\t\t\t\t\t\t        <br/>\n"
+"\t\t\t\t\t\t\t        <br/>\n"
+"\t\t\t\t\t\t\t    </p>\n"
+"                              </td>\n"
+"                            </tbody>\n"
+"                          </table>\n"
+"                        </td>\n"
+"                      </tr>\n"
+"\n"
+"                      <!-- FOOTER -->\n"
+"                      <tr>\n"
+"                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                          <table width=\"590\" border=\"0\" cellpadding=\"0\" bgcolor=\"#875A7B\" style=\"min-width: 590px; background-color: rgb(135,90,123); padding: 20px; border-collapse:separate;\">\n"
+"                            <tr>\n"
+"                              <td valign=\"middle\" align=\"left\" style=\"color: #fff; padding-top: 10px; padding-bottom: 10px; font-size: 12px;\">\n"
+"                                ${object.company_id.name}<br/>\n"
+"                                ${object.company_id.phone or ''}\n"
+"                              </td>\n"
+"                              <td valign=\"middle\" align=\"right\" style=\"color: #fff; padding-top: 10px; padding-bottom: 10px; font-size: 12px;\">\n"
+"                                % if object.company_id.email:\n"
+"                                <a href=\"mailto:${object.company_id.email}\" style=\"text-decoration:none; color: white;\">${object.company_id.email}</a><br/>\n"
+"                                % endif\n"
+"                                % if object.company_id.website:\n"
+"                                    <a href=\"${object.company_id.website}\" style=\"text-decoration:none; color: white;\">\n"
+"                                        ${object.company_id.website}\n"
+"                                    </a>\n"
+"                                % endif\n"
+"                              </td>\n"
+"                            </tr>\n"
+"                          </table>\n"
+"                        </td>\n"
+"                      </tr>\n"
+"                    </tbody>\n"
+"                </table>\n"
+"\t\t\t\n"
+"\t\t\t</div>\n"
+"          "
+
+#. module: sh_helpdesk
+#: model:mail.template,body_html:sh_helpdesk.sh_ticket_replay_template
+msgid ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"\t\t\t\n"
+"\t\t\t\t<table border=\"0\" width=\"100%\" cellpadding=\"0\" bgcolor=\"#ededed\" style=\"padding: 20px; background-color: #ededed; border-collapse:separate;\" summary=\"o_mail_notification\">\n"
+"                    <tbody>\n"
+"\n"
+"                      <!-- HEADER -->\n"
+"                      <tr>\n"
+"                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                          <table width=\"590\" border=\"0\" cellpadding=\"0\" bgcolor=\"#875A7B\" style=\"min-width: 590px; background-color: rgb(135,90,123); padding: 20px; border-collapse:separate;\">\n"
+"                            <tr>\n"
+"                              <td valign=\"middle\">\n"
+"                                  <span style=\"font-size:20px; color:white; font-weight: bold;\">\n"
+"                                      ${object.name}\n"
+"                                  </span>\n"
+"                              </td>\n"
+"                              <td valign=\"middle\" align=\"right\">\n"
+"                                  <img src=\"/logo.png?company=${object.company_id.id}\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${object.company_id.name}\"/>\n"
+"                              </td>\n"
+"                            </tr>\n"
+"                          </table>\n"
+"                        </td>\n"
+"                      </tr>\n"
+"\n"
+"                      <!-- CONTENT -->\n"
+"                      <tr>\n"
+"                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                          <table width=\"590\" border=\"0\" cellpadding=\"0\" bgcolor=\"#ffffff\" style=\"min-width: 590px; background-color: rgb(255, 255, 255); padding: 20px; border-collapse:separate;\">\n"
+"                            <tbody>\n"
+"                              <td valign=\"top\" style=\"font-family:Arial,Helvetica,sans-serif; color: #555; font-size: 14px;\">\n"
+"                              \t<p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"\t\t\t\t\t\t\t    \tDobrý deň ${object.partner_id.name},\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\tNa vašej požiadavke pracujeme, čoskoro vás budeme kontaktovať.\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<center>\n"
+"\t\t\t\t\t\t\t\t\t\t<a href=\"/my/tickets/${object.id}\" style=\"background-color: #1abc9c; padding: 10px; text-decoration: none; color: #fff; border-radius: 5px; font-size: 16px;\" class=\"o_default_snippet_text\">Zobraziť ticket</a>\n"
+"\t\t\t\t\t\t\t\t\t</center>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t    </p>\n"
+"                              </td>\n"
+"                            </tbody>\n"
+"                          </table>\n"
+"                        </td>\n"
+"                      </tr>\n"
+"\n"
+"                      <!-- FOOTER -->\n"
+"                      <tr>\n"
+"                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                          <table width=\"590\" border=\"0\" cellpadding=\"0\" bgcolor=\"#875A7B\" style=\"min-width: 590px; background-color: rgb(135,90,123); padding: 20px; border-collapse:separate;\">\n"
+"                            <tr>\n"
+"                              <td valign=\"middle\" align=\"left\" style=\"color: #fff; padding-top: 10px; padding-bottom: 10px; font-size: 12px;\">\n"
+"                                ${object.company_id.name}<br/>\n"
+"                                ${object.company_id.phone or ''}\n"
+"                              </td>\n"
+"                              <td valign=\"middle\" align=\"right\" style=\"color: #fff; padding-top: 10px; padding-bottom: 10px; font-size: 12px;\">\n"
+"                                % if object.company_id.email:\n"
+"                                <a href=\"mailto:${object.company_id.email}\" style=\"text-decoration:none; color: white;\">${object.company_id.email}</a><br/>\n"
+"                                % endif\n"
+"                                % if object.company_id.website:\n"
+"                                    <a href=\"${object.company_id.website}\" style=\"text-decoration:none; color: white;\">\n"
+"                                        ${object.company_id.website}\n"
+"                                    </a>\n"
+"                                % endif\n"
+"                              </td>\n"
+"                            </tr>\n"
+"                          </table>\n"
+"                        </td>\n"
+"                      </tr>\n"
+"                    </tbody>\n"
+"                </table>\n"
+"\t\t\t\n"
+"\t\t\t\n"
+"\t\t\t</div>\n"
+"            "
+msgstr ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"\t\t\t\n"
+"\t\t\t\t<table border=\"0\" width=\"100%\" cellpadding=\"0\" bgcolor=\"#ededed\" style=\"padding: 20px; background-color: #ededed; border-collapse:separate;\" summary=\"o_mail_notification\">\n"
+"                    <tbody>\n"
+"\n"
+"                      <!-- HEADER -->\n"
+"                      <tr>\n"
+"                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                          <table width=\"590\" border=\"0\" cellpadding=\"0\" bgcolor=\"#875A7B\" style=\"min-width: 590px; background-color: rgb(135,90,123); padding: 20px; border-collapse:separate;\">\n"
+"                            <tr>\n"
+"                              <td valign=\"middle\">\n"
+"                                  <span style=\"font-size:20px; color:white; font-weight: bold;\">\n"
+"                                      ${object.name}\n"
+"                                  </span>\n"
+"                              </td>\n"
+"                              <td valign=\"middle\" align=\"right\">\n"
+"                                  <img src=\"/logo.png?company=${object.company_id.id}\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${object.company_id.name}\"/>\n"
+"                              </td>\n"
+"                            </tr>\n"
+"                          </table>\n"
+"                        </td>\n"
+"                      </tr>\n"
+"\n"
+"                      <!-- CONTENT -->\n"
+"                      <tr>\n"
+"                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                          <table width=\"590\" border=\"0\" cellpadding=\"0\" bgcolor=\"#ffffff\" style=\"min-width: 590px; background-color: rgb(255, 255, 255); padding: 20px; border-collapse:separate;\">\n"
+"                            <tbody>\n"
+"                              <td valign=\"top\" style=\"font-family:Arial,Helvetica,sans-serif; color: #555; font-size: 14px;\">\n"
+"                              \t<p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"\t\t\t\t\t\t\t    \tDobrý de ${object.partner_id.name},\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\tNa vašej požiadavke pracujeme, čoskoro vás budeme kontaktovať.\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<center>\n"
+"\t\t\t\t\t\t\t\t\t\t<a href=\"/my/tickets/${object.id}\" style=\"background-color: #1abc9c; padding: 10px; text-decoration: none; color: #fff; border-radius: 5px; font-size: 16px;\" class=\"o_default_snippet_text\">Zobraziť ticket</a>\n"
+"\t\t\t\t\t\t\t\t\t</center>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t    </p>\n"
+"                              </td>\n"
+"                            </tbody>\n"
+"                          </table>\n"
+"                        </td>\n"
+"                      </tr>\n"
+"\n"
+"                      <!-- FOOTER -->\n"
+"                      <tr>\n"
+"                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                          <table width=\"590\" border=\"0\" cellpadding=\"0\" bgcolor=\"#875A7B\" style=\"min-width: 590px; background-color: rgb(135,90,123); padding: 20px; border-collapse:separate;\">\n"
+"                            <tr>\n"
+"                              <td valign=\"middle\" align=\"left\" style=\"color: #fff; padding-top: 10px; padding-bottom: 10px; font-size: 12px;\">\n"
+"                                ${object.company_id.name}<br/>\n"
+"                                ${object.company_id.phone or ''}\n"
+"                              </td>\n"
+"                              <td valign=\"middle\" align=\"right\" style=\"color: #fff; padding-top: 10px; padding-bottom: 10px; font-size: 12px;\">\n"
+"                                % if object.company_id.email:\n"
+"                                <a href=\"mailto:${object.company_id.email}\" style=\"text-decoration:none; color: white;\">${object.company_id.email}</a><br/>\n"
+"                                % endif\n"
+"                                % if object.company_id.website:\n"
+"                                    <a href=\"${object.company_id.website}\" style=\"text-decoration:none; color: white;\">\n"
+"                                        ${object.company_id.website}\n"
+"                                    </a>\n"
+"                                % endif\n"
+"                              </td>\n"
+"                            </tr>\n"
+"                          </table>\n"
+"                        </td>\n"
+"                      </tr>\n"
+"                    </tbody>\n"
+"                </table>\n"
+"\t\t\t\n"
+"\t\t\t\n"
+"\t\t\t</div>\n"
+"            "
+
+#. module: sh_helpdesk
+#: model:mail.template,body_html:sh_helpdesk.sh_ticket_cancelled_template
+msgid ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"\t\t\t\n"
+"\t\t\t\n"
+"\t\t\t\t<table border=\"0\" width=\"100%\" cellpadding=\"0\" bgcolor=\"#ededed\" style=\"padding: 20px; background-color: #ededed; border-collapse:separate;\" summary=\"o_mail_notification\">\n"
+"                    <tbody>\n"
+"\n"
+"                      <!-- HEADER -->\n"
+"                      <tr>\n"
+"                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                          <table width=\"590\" border=\"0\" cellpadding=\"0\" bgcolor=\"#875A7B\" style=\"min-width: 590px; background-color: rgb(135,90,123); padding: 20px; border-collapse:separate;\">\n"
+"                            <tr>\n"
+"                              <td valign=\"middle\">\n"
+"                                  <span style=\"font-size:20px; color:white; font-weight: bold;\">\n"
+"                                      ${object.name}\n"
+"                                  </span>\n"
+"                              </td>\n"
+"                              <td valign=\"middle\" align=\"right\">\n"
+"                                  <img src=\"/logo.png?company=${object.company_id.id}\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${object.company_id.name}\"/>\n"
+"                              </td>\n"
+"                            </tr>\n"
+"                          </table>\n"
+"                        </td>\n"
+"                      </tr>\n"
+"\n"
+"                      <!-- CONTENT -->\n"
+"                      <tr>\n"
+"                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                          <table width=\"590\" border=\"0\" cellpadding=\"0\" bgcolor=\"#ffffff\" style=\"min-width: 590px; background-color: rgb(255, 255, 255); padding: 20px; border-collapse:separate;\">\n"
+"                            <tbody>\n"
+"                              <td valign=\"top\" style=\"font-family:Arial,Helvetica,sans-serif; color: #555; font-size: 14px;\">\n"
+"                              \t<p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"\t\t\t\t\t\t\t    \tDobrý de ${object.partner_id.name},\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t               \t\tVáš ticket je nateraz zrušený z dôvodu istého technického problému.\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<center>\n"
+"\t\t\t\t\t\t\t\t\t\t<a href=\"/my/tickets/${object.id}\" style=\"background-color: #1abc9c; padding: 10px; text-decoration: none; color: #fff; border-radius: 5px; font-size: 16px;\" class=\"o_default_snippet_text\">Zobraziť ticket</a>\n"
+"\t\t\t\t\t\t\t\t\t</center>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t    </p>\n"
+"                              </td>\n"
+"                            </tbody>\n"
+"                          </table>\n"
+"                        </td>\n"
+"                      </tr>\n"
+"\n"
+"                      <!-- FOOTER -->\n"
+"                      <tr>\n"
+"                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                          <table width=\"590\" border=\"0\" cellpadding=\"0\" bgcolor=\"#875A7B\" style=\"min-width: 590px; background-color: rgb(135,90,123); padding: 20px; border-collapse:separate;\">\n"
+"                            <tr>\n"
+"                              <td valign=\"middle\" align=\"left\" style=\"color: #fff; padding-top: 10px; padding-bottom: 10px; font-size: 12px;\">\n"
+"                                ${object.company_id.name}<br/>\n"
+"                                ${object.company_id.phone or ''}\n"
+"                              </td>\n"
+"                              <td valign=\"middle\" align=\"right\" style=\"color: #fff; padding-top: 10px; padding-bottom: 10px; font-size: 12px;\">\n"
+"                                % if object.company_id.email:\n"
+"                                <a href=\"mailto:${object.company_id.email}\" style=\"text-decoration:none; color: white;\">${object.company_id.email}</a><br/>\n"
+"                                % endif\n"
+"                                % if object.company_id.website:\n"
+"                                    <a href=\"${object.company_id.website}\" style=\"text-decoration:none; color: white;\">\n"
+"                                        ${object.company_id.website}\n"
+"                                    </a>\n"
+"                                % endif\n"
+"                              </td>\n"
+"                            </tr>\n"
+"                          </table>\n"
+"                        </td>\n"
+"                      </tr>\n"
+"                    </tbody>\n"
+"                </table>\n"
+"\t\t\t\n"
+"\t\t\t</div>\n"
+"            "
+msgstr ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"\t\t\t\n"
+"\t\t\t\n"
+"\t\t\t\t<table border=\"0\" width=\"100%\" cellpadding=\"0\" bgcolor=\"#ededed\" style=\"padding: 20px; background-color: #ededed; border-collapse:separate;\" summary=\"o_mail_notification\">\n"
+"                    <tbody>\n"
+"\n"
+"                      <!-- HEADER -->\n"
+"                      <tr>\n"
+"                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                          <table width=\"590\" border=\"0\" cellpadding=\"0\" bgcolor=\"#875A7B\" style=\"min-width: 590px; background-color: rgb(135,90,123); padding: 20px; border-collapse:separate;\">\n"
+"                            <tr>\n"
+"                              <td valign=\"middle\">\n"
+"                                  <span style=\"font-size:20px; color:white; font-weight: bold;\">\n"
+"                                      ${object.name}\n"
+"                                  </span>\n"
+"                              </td>\n"
+"                              <td valign=\"middle\" align=\"right\">\n"
+"                                  <img src=\"/logo.png?company=${object.company_id.id}\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${object.company_id.name}\"/>\n"
+"                              </td>\n"
+"                            </tr>\n"
+"                          </table>\n"
+"                        </td>\n"
+"                      </tr>\n"
+"\n"
+"                      <!-- CONTENT -->\n"
+"                      <tr>\n"
+"                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                          <table width=\"590\" border=\"0\" cellpadding=\"0\" bgcolor=\"#ffffff\" style=\"min-width: 590px; background-color: rgb(255, 255, 255); padding: 20px; border-collapse:separate;\">\n"
+"                            <tbody>\n"
+"                              <td valign=\"top\" style=\"font-family:Arial,Helvetica,sans-serif; color: #555; font-size: 14px;\">\n"
+"                              \t<p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"\t\t\t\t\t\t\t    \tDobrý deň ${object.partner_id.name},\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t               \t\tVáš ticket je nateraz zrušený z dôvodu istého technického problému.\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<center>\n"
+"\t\t\t\t\t\t\t\t\t\t<a href=\"/my/tickets/${object.id}\" style=\"background-color: #1abc9c; padding: 10px; text-decoration: none; color: #fff; border-radius: 5px; font-size: 16px;\" class=\"o_default_snippet_text\">Zobraziť ticket</a>\n"
+"\t\t\t\t\t\t\t\t\t</center>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t    </p>\n"
+"                              </td>\n"
+"                            </tbody>\n"
+"                          </table>\n"
+"                        </td>\n"
+"                      </tr>\n"
+"\n"
+"                      <!-- FOOTER -->\n"
+"                      <tr>\n"
+"                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                          <table width=\"590\" border=\"0\" cellpadding=\"0\" bgcolor=\"#875A7B\" style=\"min-width: 590px; background-color: rgb(135,90,123); padding: 20px; border-collapse:separate;\">\n"
+"                            <tr>\n"
+"                              <td valign=\"middle\" align=\"left\" style=\"color: #fff; padding-top: 10px; padding-bottom: 10px; font-size: 12px;\">\n"
+"                                ${object.company_id.name}<br/>\n"
+"                                ${object.company_id.phone or ''}\n"
+"                              </td>\n"
+"                              <td valign=\"middle\" align=\"right\" style=\"color: #fff; padding-top: 10px; padding-bottom: 10px; font-size: 12px;\">\n"
+"                                % if object.company_id.email:\n"
+"                                <a href=\"mailto:${object.company_id.email}\" style=\"text-decoration:none; color: white;\">${object.company_id.email}</a><br/>\n"
+"                                % endif\n"
+"                                % if object.company_id.website:\n"
+"                                    <a href=\"${object.company_id.website}\" style=\"text-decoration:none; color: white;\">\n"
+"                                        ${object.company_id.website}\n"
+"                                    </a>\n"
+"                                % endif\n"
+"                              </td>\n"
+"                            </tr>\n"
+"                          </table>\n"
+"                        </td>\n"
+"                      </tr>\n"
+"                    </tbody>\n"
+"                </table>\n"
+"\t\t\t\n"
+"\t\t\t</div>\n"
+"            "
+
+#. module: sh_helpdesk
+#: model:mail.template,body_html:sh_helpdesk.sh_ticket_done_template
+msgid ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"\t\t\t\n"
+"\t\t\t\n"
+"\t\t\t\t<table border=\"0\" width=\"100%\" cellpadding=\"0\" bgcolor=\"#ededed\" style=\"padding: 20px; background-color: #ededed; border-collapse:separate;\" summary=\"o_mail_notification\">\n"
+"                    <tbody>\n"
+"\n"
+"                      <!-- HEADER -->\n"
+"                      <tr>\n"
+"                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                          <table width=\"590\" border=\"0\" cellpadding=\"0\" bgcolor=\"#875A7B\" style=\"min-width: 590px; background-color: rgb(135,90,123); padding: 20px; border-collapse:separate;\">\n"
+"                            <tr>\n"
+"                              <td valign=\"middle\">\n"
+"                                  <span style=\"font-size:20px; color:white; font-weight: bold;\">\n"
+"                                      ${object.name}\n"
+"                                  </span>\n"
+"                              </td>\n"
+"                              <td valign=\"middle\" align=\"right\">\n"
+"                                  <img src=\"/logo.png?company=${object.company_id.id}\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${object.company_id.name}\"/>\n"
+"                              </td>\n"
+"                            </tr>\n"
+"                          </table>\n"
+"                        </td>\n"
+"                      </tr>\n"
+"\n"
+"                      <!-- CONTENT -->\n"
+"                      <tr>\n"
+"                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                          <table width=\"590\" border=\"0\" cellpadding=\"0\" bgcolor=\"#ffffff\" style=\"min-width: 590px; background-color: rgb(255, 255, 255); padding: 20px; border-collapse:separate;\">\n"
+"                            <tbody>\n"
+"                              <td valign=\"top\" style=\"font-family:Arial,Helvetica,sans-serif; color: #555; font-size: 14px;\">\n"
+"                              \t<p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"\t\t\t\t\t\t\t    \tDobrý deň ${object.partner_id.name},\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t                \t\tNa základe vašej žiadosti sme vyriešili vašu požiadavku.\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<center>\n"
+"\t\t\t\t\t\t\t\t\t\t<a href=\"/my/tickets/${object.id}\" style=\"background-color: #1abc9c; padding: 10px; text-decoration: none; color: #fff; border-radius: 5px; font-size: 16px;\" class=\"o_default_snippet_text\">Zobraziť ticket</a>\n"
+"\t\t\t\t\t\t\t\t\t</center>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t    </p>\n"
+"                              </td>\n"
+"                            </tbody>\n"
+"                          </table>\n"
+"                        </td>\n"
+"                      </tr>\n"
+"\n"
+"                      <!-- FOOTER -->\n"
+"                      <tr>\n"
+"                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                          <table width=\"590\" border=\"0\" cellpadding=\"0\" bgcolor=\"#875A7B\" style=\"min-width: 590px; background-color: rgb(135,90,123); padding: 20px; border-collapse:separate;\">\n"
+"                            <tr>\n"
+"                              <td valign=\"middle\" align=\"left\" style=\"color: #fff; padding-top: 10px; padding-bottom: 10px; font-size: 12px;\">\n"
+"                                ${object.company_id.name}<br/>\n"
+"                                ${object.company_id.phone or ''}\n"
+"                              </td>\n"
+"                              <td valign=\"middle\" align=\"right\" style=\"color: #fff; padding-top: 10px; padding-bottom: 10px; font-size: 12px;\">\n"
+"                                % if object.company_id.email:\n"
+"                                <a href=\"mailto:${object.company_id.email}\" style=\"text-decoration:none; color: white;\">${object.company_id.email}</a><br/>\n"
+"                                % endif\n"
+"                                % if object.company_id.website:\n"
+"                                    <a href=\"${object.company_id.website}\" style=\"text-decoration:none; color: white;\">\n"
+"                                        ${object.company_id.website}\n"
+"                                    </a>\n"
+"                                % endif\n"
+"                              </td>\n"
+"                            </tr>\n"
+"                          </table>\n"
+"                        </td>\n"
+"                      </tr>\n"
+"                    </tbody>\n"
+"                </table>\n"
+"\t\t\t\n"
+"\t\t\t</div>\n"
+"            "
+msgstr ""
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.portal_my_tickets
+msgid "<em class=\"font-weight-normal text-muted\">Category:</em>"
+msgstr "<em class=\"font-weight-normal text-muted\">Kategória:</em>"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.portal_my_tickets
+msgid "<em class=\"font-weight-normal text-muted\">Created By:</em>"
+msgstr "<em class=\"font-weight-normal text-muted\">Vytvoril:</em>"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.portal_my_tickets
+msgid "<em class=\"font-weight-normal text-muted\">Customer:</em>"
+msgstr "<em class=\"font-weight-normal text-muted\">Zákazník:</em>"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.portal_my_tickets
+msgid "<em class=\"font-weight-normal text-muted\">Priority:</em>"
+msgstr "<em class=\"font-weight-normal text-muted\">Priorita:</em>"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.portal_my_tickets
+msgid "<em class=\"font-weight-normal text-muted\">Reply Status:</em>"
+msgstr "<em class=\"font-weight-normal text-muted\">Stav odpovede:</em>"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.portal_my_tickets
+msgid "<em class=\"font-weight-normal text-muted\">Status:</em>"
+msgstr "<em class=\"font-weight-normal text-muted\">Stav:</em>"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.portal_my_tickets
+msgid "<em class=\"font-weight-normal text-muted\">Sub Category:</em>"
+msgstr "<em class=\"font-weight-normal text-muted\">Podkategória:</em>"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.portal_my_tickets
+msgid "<em class=\"font-weight-normal text-muted\">Subject:</em>"
+msgstr "<em class=\"font-weight-normal text-muted\">Predmet:</em>"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.portal_my_tickets
+msgid "<em class=\"font-weight-normal text-muted\">Ticket Type:</em>"
+msgstr "<em class=\"font-weight-normal text-muted\">Typ ticketu:</em>"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.portal_my_home_menu_ticket
+msgid "<em>Ticket</em>"
+msgstr "<em>Ticket</em>"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.portal_ticket_page
+msgid "<i class=\"fa fa-comment\"/> Send message"
+msgstr "<i class=\"fa fa-comment\"/> Poslať správu"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.portal_ticket_page
+msgid "<i class=\"fa fa-download\"/> Download"
+msgstr "<i class=\"fa fa-download\"/> Stiahnuť"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.portal_my_tickets
+msgid "<i class=\"fa fa-plus\"/> Create New"
+msgstr "<i class=\"fa fa-plus\"/> Vytvor nový"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.ticket_dashboard_tbl
+msgid "<span>Stage :</span>"
+msgstr "<span>Fáza:</span>"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.portal_ticket_page
+msgid "<strong class=\"text-muted\">Your Contact</strong>"
+msgstr "<strong class=\"text-muted\">Váš kontakt</strong>"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_template
+msgid "<strong>Assigned User</strong>"
+msgstr "<strong>Priradený užívateľ</strong>"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_portal_content
+msgid "<strong>Cancelled By</strong>"
+msgstr "<strong>Zrušil</strong>"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_portal_ticket_template
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_portal_content
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_template
+msgid "<strong>Cancelled Date</strong>"
+msgstr "<strong>Dátum zrušenia</strong>"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_portal_ticket_template
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_portal_content
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_template
+msgid "<strong>Cancelled Reason</strong>"
+msgstr "<strong>Dôvod zrušenia</strong>"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_portal_ticket_template
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_portal_content
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_template
+msgid "<strong>Category</strong>"
+msgstr "<strong>Kategória</strong>"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_portal_ticket_template
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_portal_content
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_template
+msgid "<strong>Closed By</strong>"
+msgstr "<strong>Uzavreté používateľom</strong>"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_portal_ticket_template
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_portal_content
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_template
+msgid "<strong>Closed Date</strong>"
+msgstr "<strong>Dátum uzavretia</strong>"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_portal_ticket_template
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_portal_content
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_template
+msgid "<strong>Create Date</strong>"
+msgstr "<strong>Dátum vytvorenia</strong>"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_portal_ticket_template
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_portal_content
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_template
+msgid "<strong>Customer Comment</strong>"
+msgstr "<strong>Komentár zákazníka</strong>"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_portal_ticket_template
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_portal_content
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_template
+msgid "<strong>Customer Rating</strong>"
+msgstr "<strong>Hodnotenie zákazníka</strong>"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_portal_ticket_template
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_template
+msgid "<strong>Customer</strong>"
+msgstr "<strong>Zákazník</strong>"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_portal_content
+msgid "<strong>Description</strong>"
+msgstr "<strong>Popis</strong>"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_portal_ticket_template
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_portal_content
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_template
+msgid "<strong>Email</strong>"
+msgstr "<strong>Email</strong>"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_portal_ticket_template
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_portal_content
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_template
+msgid "<strong>Last Update Date</strong>"
+msgstr "<strong>Dátum poslednej aktualizácie</strong>"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_portal_ticket_template
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_portal_content
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_template
+msgid "<strong>Person Name</strong>"
+msgstr "<strong>Meno osoby</strong>"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_portal_ticket_template
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_portal_content
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_template
+msgid "<strong>Priority</strong>"
+msgstr "<strong>Priorita</strong>"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_portal_ticket_template
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_portal_content
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_template
+msgid "<strong>Replied Date</strong>"
+msgstr "<strong>Dátum odpovede</strong>"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_portal_ticket_template
+msgid "<strong>Reply Status</strong>"
+msgstr "<strong>Stav odpovede</strong>"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_portal_content
+msgid "<strong>Status</strong>"
+msgstr "<strong>Stav</strong>"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_portal_ticket_template
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_portal_content
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_template
+msgid "<strong>Sub Category</strong>"
+msgstr "<strong>Podkategória</strong>"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_template
+msgid "<strong>Team Head</strong>"
+msgstr "<strong>Vedúci tímu</strong>"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_template
+msgid "<strong>Team</strong>"
+msgstr "<strong>Tím</strong>"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_portal_ticket_template
+msgid "<strong>Ticket Status</strong>"
+msgstr "<strong>Stav ticketu</strong>"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_portal_ticket_template
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_portal_content
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_template
+msgid "<strong>Ticket Subject Type</strong>"
+msgstr "<strong>Typ predmetu ticketu</strong>"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_portal_ticket_template
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_portal_content
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_template
+msgid "<strong>Ticket Type</strong>"
+msgstr "<strong>Typ ticketu</strong>"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__access_warning
+msgid "Access warning"
+msgstr "Varovanie o prístupe"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.ticket_dashboard_tbl
+msgid "Action"
+msgstr "Akcia"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__message_needaction
+msgid "Action Needed"
+msgstr "Je potrebná akcia"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__active
+msgid "Active"
+msgstr "Aktívny"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__activity_ids
+msgid "Activities"
+msgstr "Činnosti"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Výnimka z aktivity"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__activity_state
+msgid "Activity State"
+msgstr "Stav činnosti"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Ikona typu aktivity"
+
+#. module: sh_helpdesk
+#: code:addons/sh_helpdesk/controllers/portal.py:0
+#, python-format
+msgid "All"
+msgstr "Všetky"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__ticket_allocated
+msgid "Allocated"
+msgstr "Pridelené"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_form_view
+msgid "Approve"
+msgstr "Schváliť"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_search_view
+msgid "Archived"
+msgstr "Archivované"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.portal_my_tickets
+msgid "Assign To"
+msgstr "Priradené"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.sh_ticket_dashboard_kanban_view
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.ticket_dashboard_tbl
+msgid "Assign User"
+msgstr "Priradiť používateľa"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__user_id
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_search_view
+msgid "Assigned User"
+msgstr "Priradený užívateľ"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__message_attachment_count
+msgid "Attachment Count"
+msgstr "Počet príloh"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__attachment_ids
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_form_view
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.portal_my_tickets
+msgid "Attachments"
+msgstr "Prílohy"
+
+#. module: sh_helpdesk
+#: model:ir.actions.server,name:sh_helpdesk.cron_helpdesk_ticket_close_ir_actions_server
+#: model:ir.cron,cron_name:sh_helpdesk.cron_helpdesk_ticket_close
+#: model:ir.cron,name:sh_helpdesk.cron_helpdesk_ticket_close
+msgid "Auto Close Helpdesk Ticket"
+msgstr "Automatické uzavretie ticketu technickej podpory"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_res_company__auto_close_ticket
+#: model:ir.model.fields,field_description:sh_helpdesk.field_res_config_settings__auto_close_ticket
+msgid "Auto Close Ticket"
+msgstr "Automaticky uzavrieť ticket"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_team_form_view
+msgid "Avatar"
+msgstr "Avatar"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__cancel_button_boolean
+msgid "Cancel Button"
+msgstr "Tlačidlo Zrušiť"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__cancel_reason
+msgid "Cancel Reason"
+msgstr "Dôvod zrušenia"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__cancel_stage_boolean
+#: model:ir.model.fields,field_description:sh_helpdesk.field_res_company__cancel_stage_id
+#: model:ir.model.fields,field_description:sh_helpdesk.field_res_config_settings__cancel_stage_id
+msgid "Cancel Stage"
+msgstr "Zrušiť etapu"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_form_view
+msgid "Cancel Ticket"
+msgstr "Zrušiť ticket"
+
+#. module: sh_helpdesk
+#. openerp-web
+#: code:addons/sh_helpdesk/static/src/js/helpdesk_ticket_kanban_examples.js:0
+#: model:helpdesk.stages,name:sh_helpdesk.cancel_stage
+#, python-format
+msgid "Cancelled"
+msgstr "Zrušený"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__cancel_by
+msgid "Cancelled By"
+msgstr "Zrušil"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__cancel_date
+msgid "Cancelled Date"
+msgstr "Dátum zrušenia"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_search_view
+msgid "Cancelled Tickets"
+msgstr "Zrušené tickety"
+
+#. module: sh_helpdesk
+#: code:addons/sh_helpdesk/controllers/portal.py:0
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__category_id
+#: model:ir.model.fields,field_description:sh_helpdesk.field_res_company__category
+#: model:ir.model.fields,field_description:sh_helpdesk.field_res_config_settings__category
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_search_view
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.portal_my_tickets
+#, python-format
+msgid "Category"
+msgstr "Kategória"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_category_view_form
+msgid "Category Name"
+msgstr "Názov kategórie"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__category_bool
+msgid "Category Setting"
+msgstr "Nastavenie kategórie"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.portal_my_tickets
+msgid "Close"
+msgstr "Uzavrieť"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__close_date
+msgid "Close Date"
+msgstr "Dátum uzavretia"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_form_view
+msgid "Close Ticket"
+msgstr "Zatvorte ticket"
+
+#. module: sh_helpdesk
+#. openerp-web
+#: code:addons/sh_helpdesk/static/src/js/helpdesk_ticket_kanban_examples.js:0
+#: model:helpdesk.stages,name:sh_helpdesk.close_stage
+#, python-format
+msgid "Closed"
+msgstr "Uzavreté"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__close_by
+msgid "Closed By"
+msgstr "Uzavreté používateľom"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_form_view
+msgid "Closed Comment"
+msgstr "Uzavretý komentár"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__closed_stage_boolean
+#: model:ir.model.fields,field_description:sh_helpdesk.field_res_company__close_stage_id
+#: model:ir.model.fields,field_description:sh_helpdesk.field_res_config_settings__close_stage_id
+msgid "Closed Stage"
+msgstr "Uzavretá etapa"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_priority__color
+msgid "Color"
+msgstr "Farba"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_tags__color
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__color
+msgid "Color Index"
+msgstr "Index farby"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__comment
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_feedback_page
+msgid "Comment"
+msgstr "Komentovať"
+
+#. module: sh_helpdesk
+#: model:ir.model,name:sh_helpdesk.model_res_company
+msgid "Companies"
+msgstr "Spoločnosti"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__company_id
+#: model:ir.model.fields,field_description:sh_helpdesk.field_res_config_settings__company_id
+msgid "Company"
+msgstr "Spoločnosť"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_search_view
+msgid "Completed Tickets"
+msgstr "Dokončené tickety"
+
+#. module: sh_helpdesk
+#: model:ir.model,name:sh_helpdesk.model_res_config_settings
+msgid "Config Settings"
+msgstr "Nastavenia konfigurácie"
+
+#. module: sh_helpdesk
+#: model:ir.ui.menu,name:sh_helpdesk.helpdesk_config_menu
+msgid "Configuration"
+msgstr "Konfigurácia"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.portal_ticket_page
+msgid "Contact"
+msgstr "Kontakt"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_form_view
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_tree_view
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.portal_my_tickets
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.ticket_dashboard_tbl
+msgid "Create Date"
+msgstr "Dátum vytvorenia"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.portal_my_tickets
+msgid "Create Helpdesk Ticket"
+msgstr "Vytvorte ticket technickej podpory"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.portal_my_tickets
+msgid "Create Support Request"
+msgstr "Vytvorte žiadosť o podporu"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.portal_my_tickets
+msgid "Create Ticket"
+msgstr "Vytvorte ticket"
+
+#. module: sh_helpdesk
+#: model_terms:ir.actions.act_window,help:sh_helpdesk.helpdesk_stages_action
+msgid "Create a New Stage"
+msgstr "Vytvorte novú etapu"
+
+#. module: sh_helpdesk
+#: model_terms:ir.actions.act_window,help:sh_helpdesk.helpdesk_subject_type_action
+msgid "Create a New Subject Type"
+msgstr "Vytvorte nový typ predmetu"
+
+#. module: sh_helpdesk
+#: model_terms:ir.actions.act_window,help:sh_helpdesk.helpdesk_tags_action
+msgid "Create a New Tag"
+msgstr "Vytvorte novú značku"
+
+#. module: sh_helpdesk
+#: model_terms:ir.actions.act_window,help:sh_helpdesk.helpdesk_team_action
+msgid "Create a New Team"
+msgstr "Vytvorte nový tím"
+
+#. module: sh_helpdesk
+#: model_terms:ir.actions.act_window,help:sh_helpdesk.helpdesk_ticket_action
+msgid "Create a New Ticket"
+msgstr "Vytvorte nový ticket"
+
+#. module: sh_helpdesk
+#: model_terms:ir.actions.act_window,help:sh_helpdesk.helpdesk_ticket_type_action
+msgid "Create a New Ticket Type"
+msgstr "Vytvorte nový typ ticketu"
+
+#. module: sh_helpdesk
+#: model_terms:ir.actions.act_window,help:sh_helpdesk.helpdesk_category_action
+msgid "Create new category"
+msgstr "Vytvorte novú kategóriu"
+
+#. module: sh_helpdesk
+#: model_terms:ir.actions.act_window,help:sh_helpdesk.helpdesk_subcategory_action
+msgid "Create new sub category"
+msgstr "Vytvorte novú podkategóriu"
+
+#. module: sh_helpdesk
+#: code:addons/sh_helpdesk/controllers/portal.py:0
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_search_view
+#, python-format
+msgid "Created By"
+msgstr "Vytvoril"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_category__create_uid
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_priority__create_uid
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_stages__create_uid
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_sub_type__create_uid
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_subcategory__create_uid
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_tags__create_uid
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_team__create_uid
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__create_uid
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket_type__create_uid
+#: model:ir.model.fields,field_description:sh_helpdesk.field_ticket_dashboard__create_uid
+msgid "Created by"
+msgstr "Vytvoril"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_category__create_date
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_priority__create_date
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_stages__create_date
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_sub_type__create_date
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_subcategory__create_date
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_tags__create_date
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_team__create_date
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__create_date
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket_type__create_date
+#: model:ir.model.fields,field_description:sh_helpdesk.field_ticket_dashboard__create_date
+msgid "Created on"
+msgstr "Vytvorené"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.sh_ticket_dashboard_kanban_view
+msgid "Current Month"
+msgstr "Aktuálny mesiac"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.sh_ticket_dashboard_kanban_view
+msgid "Current Week"
+msgstr "Aktuálny týždeň"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.sh_ticket_dashboard_kanban_view
+msgid "Current Year"
+msgstr "Aktuálny rok"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.sh_ticket_dashboard_kanban_view
+msgid "Custom"
+msgstr "Vlastné"
+
+#. module: sh_helpdesk
+#: code:addons/sh_helpdesk/controllers/portal.py:0
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_search_view
+#, python-format
+msgid "Customer"
+msgstr "Zákazník"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__customer_comment
+msgid "Customer Comment"
+msgstr "Komentár zákazníka"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.ticket_dashboard_tbl
+msgid "Customer Name"
+msgstr "Meno zákazníka"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,help:sh_helpdesk.field_helpdesk_ticket__access_url
+msgid "Customer Portal URL"
+msgstr "URL zákazníckeho portálu"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__priority_new
+#: model:ir.model.fields,field_description:sh_helpdesk.field_res_company__customer_rating
+#: model:ir.model.fields,field_description:sh_helpdesk.field_res_config_settings__customer_rating
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_form_view
+msgid "Customer Rating"
+msgstr "Hodnotenie zákazníka"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields.selection,name:sh_helpdesk.selection__helpdesk_ticket__state__customer_replied
+msgid "Customer Replied"
+msgstr "Zákazník odpovedal"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_res_company__dashboard_filter
+#: model:ir.model.fields,field_description:sh_helpdesk.field_res_config_settings__dashboard_filter
+msgid "Dashbaord Filter"
+msgstr "Dashboard filter"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_res_company__dashboard_tables
+#: model:ir.model.fields,field_description:sh_helpdesk.field_res_config_settings__dashboard_tables
+msgid "Dashbaord Tables"
+msgstr "Tabuľky dashboardu"
+
+#. module: sh_helpdesk
+#: model:ir.ui.menu,name:sh_helpdesk.sh_menu_ticket_dashboard
+msgid "Dashboard"
+msgstr "Dashboard"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.ticket_dashboard_tbl
+msgid "Data not available."
+msgstr "Údaje nie sú k dispozícii."
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_res_company__sh_default_user_id
+#: model:ir.model.fields,field_description:sh_helpdesk.field_res_config_settings__sh_default_user_id
+msgid "Default Assign User"
+msgstr "Predvolené priradenie používateľa"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_res_company__sh_default_team_id
+#: model:ir.model.fields,field_description:sh_helpdesk.field_res_config_settings__sh_default_team_id
+msgid "Default Team"
+msgstr "Predvolený tím"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__description
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_portal_ticket_template
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_form_view
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_template
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.portal_my_tickets
+msgid "Description"
+msgstr "Popis"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_category__display_name
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_priority__display_name
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_stages__display_name
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_sub_type__display_name
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_subcategory__display_name
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_tags__display_name
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_team__display_name
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__display_name
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket_type__display_name
+#: model:ir.model.fields,field_description:sh_helpdesk.field_res_company__display_name
+#: model:ir.model.fields,field_description:sh_helpdesk.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:sh_helpdesk.field_res_users__display_name
+#: model:ir.model.fields,field_description:sh_helpdesk.field_ticket_dashboard__display_name
+msgid "Display Name"
+msgstr "Zobraziť meno"
+
+#. module: sh_helpdesk
+#. openerp-web
+#: code:addons/sh_helpdesk/static/src/js/helpdesk_ticket_kanban_examples.js:0
+#: model:helpdesk.stages,name:sh_helpdesk.done_stage
+#, python-format
+msgid "Done"
+msgstr "Hotovo"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__done_button_boolean
+msgid "Done Button"
+msgstr "Tlačidlo Hotovo"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__done_stage_boolean
+msgid "Done Stage"
+msgstr "Hotovo"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.portal_ticket_page
+msgid "Download"
+msgstr "Stiahnuť"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_res_company__new_stage_id
+#: model:ir.model.fields,field_description:sh_helpdesk.field_res_config_settings__new_stage_id
+msgid "Draft/New Stage"
+msgstr "Koncept / nová etapa"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__email
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.portal_my_tickets
+msgid "Email"
+msgstr "Email"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields.selection,name:sh_helpdesk.selection__helpdesk_ticket__priority_new__6
+msgid "Excellent"
+msgstr "Vynikajúci"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__message_follower_ids
+msgid "Followers"
+msgstr "Sledovatelia"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Sledovatelia (kanály)"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Sledovatelia (partneri)"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,help:sh_helpdesk.field_helpdesk_ticket__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Font awesome ikonka napr. fa-tasks"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__form_url
+msgid "Form Url"
+msgstr "URL adresa formulára"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_search_view
+msgid "Group By"
+msgstr "Zoskupiť podľa"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_stages__sh_group_ids
+msgid "Groups"
+msgstr "Skupiny"
+
+#. module: sh_helpdesk
+#: model:ir.module.category,description:sh_helpdesk.module_helpdesk_category
+#: model:ir.module.category,name:sh_helpdesk.module_helpdesk_category
+#: model:ir.ui.menu,name:sh_helpdesk.helpdesk_main_menu
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_config_setting_view
+msgid "Helpdesk"
+msgstr "Technická podpora"
+
+#. module: sh_helpdesk
+#: model:ir.actions.act_window,name:sh_helpdesk.helpdesk_category_action
+#: model:ir.ui.menu,name:sh_helpdesk.helpdesk_category_menu
+msgid "Helpdesk Categories"
+msgstr "Kategórie technickej podpory"
+
+#. module: sh_helpdesk
+#: model:ir.model,name:sh_helpdesk.model_helpdesk_category
+msgid "Helpdesk Category"
+msgstr "Kategória technickej podpory"
+
+#. module: sh_helpdesk
+#: model:ir.actions.act_window,name:sh_helpdesk.helpdesk_priority_action
+#: model:ir.ui.menu,name:sh_helpdesk.helpdesk_priority_menu
+msgid "Helpdesk Priorities"
+msgstr "Priority helpdesku"
+
+#. module: sh_helpdesk
+#: model:ir.model,name:sh_helpdesk.model_helpdesk_priority
+msgid "Helpdesk Priority"
+msgstr "Priorita helpdesku"
+
+#. module: sh_helpdesk
+#: model:ir.actions.act_window,name:sh_helpdesk.action_helpdesk_configuration
+msgid "Helpdesk Settings"
+msgstr "Nastavenia technickej podpory"
+
+#. module: sh_helpdesk
+#: model:ir.actions.act_window,name:sh_helpdesk.helpdesk_stages_action
+#: model:ir.model,name:sh_helpdesk.model_helpdesk_stages
+#: model:ir.ui.menu,name:sh_helpdesk.helpdesk_stages_menu
+msgid "Helpdesk Stages"
+msgstr "Etapy technickej podpory"
+
+#. module: sh_helpdesk
+#: model:ir.actions.act_window,name:sh_helpdesk.helpdesk_subcategory_action
+#: model:ir.ui.menu,name:sh_helpdesk.helpdesk_subcategory_menu
+msgid "Helpdesk Sub Categories"
+msgstr "Podkategórie technickej podpory"
+
+#. module: sh_helpdesk
+#: model:ir.model,name:sh_helpdesk.model_helpdesk_subcategory
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_subcategory_view_form
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_subcategory_view_tree
+msgid "Helpdesk SubCategory"
+msgstr "Podkategória technickej podpory"
+
+#. module: sh_helpdesk
+#: model:ir.actions.act_window,name:sh_helpdesk.helpdesk_subject_type_action
+#: model:ir.model,name:sh_helpdesk.model_helpdesk_sub_type
+msgid "Helpdesk Subject Type"
+msgstr "Typ predmetu technickej podpory"
+
+#. module: sh_helpdesk
+#: model:ir.ui.menu,name:sh_helpdesk.helpdesk_subject_type_menu
+msgid "Helpdesk Subject Types"
+msgstr "Typy predmetov technickej podpory"
+
+#. module: sh_helpdesk
+#: model:ir.actions.act_window,name:sh_helpdesk.helpdesk_tags_action
+#: model:ir.model,name:sh_helpdesk.model_helpdesk_tags
+#: model:ir.ui.menu,name:sh_helpdesk.helpdesk_tags_menu
+msgid "Helpdesk Tags"
+msgstr "Značky technickej podpory"
+
+#. module: sh_helpdesk
+#: model:ir.actions.act_window,name:sh_helpdesk.helpdesk_team_action
+#: model:ir.model,name:sh_helpdesk.model_helpdesk_team
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_team_form_view
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_team_tree_view
+msgid "Helpdesk Team"
+msgstr "Tím technickej podpory"
+
+#. module: sh_helpdesk
+#: model:ir.ui.menu,name:sh_helpdesk.helpdesk_team_menu
+msgid "Helpdesk Teams"
+msgstr "Tímy technickej podpory"
+
+#. module: sh_helpdesk
+#: model:ir.actions.report,name:sh_helpdesk.action_portal_report_helpdesk_ticket
+#: model:ir.actions.report,name:sh_helpdesk.action_report_helpdesk_ticket
+#: model:ir.model,name:sh_helpdesk.model_helpdesk_ticket
+msgid "Helpdesk Ticket"
+msgstr "Helpdesk ticket"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_search_view
+msgid "Helpdesk Ticket Search"
+msgstr "Helpdesk vyhľadávanie ticketov"
+
+#. module: sh_helpdesk
+#: model:ir.actions.act_window,name:sh_helpdesk.helpdesk_ticket_type_action
+#: model:ir.model,name:sh_helpdesk.model_helpdesk_ticket_type
+msgid "Helpdesk Ticket Type"
+msgstr "Typ ticketu technickej podpory"
+
+#. module: sh_helpdesk
+#: model:ir.ui.menu,name:sh_helpdesk.helpdesk_ticket_type_menu
+msgid "Helpdesk Ticket Types"
+msgstr "Typy ticketov pre helpdesk"
+
+#. module: sh_helpdesk
+#: model:ir.actions.act_window,name:sh_helpdesk.helpdesk_ticket_action
+#: model:ir.ui.menu,name:sh_helpdesk.helpdesk_tickets_sub_menu
+msgid "Helpdesk Tickets"
+msgstr "Helpdesk tickety"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields.selection,name:sh_helpdesk.selection__helpdesk_ticket__priority_new__4
+msgid "High"
+msgstr "Vysoká"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.portal_ticket_page
+msgid "History"
+msgstr "História"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_category__id
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_priority__id
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_stages__id
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_sub_type__id
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_subcategory__id
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_tags__id
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_team__id
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__id
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket_type__id
+#: model:ir.model.fields,field_description:sh_helpdesk.field_res_company__id
+#: model:ir.model.fields,field_description:sh_helpdesk.field_res_config_settings__id
+#: model:ir.model.fields,field_description:sh_helpdesk.field_res_users__id
+#: model:ir.model.fields,field_description:sh_helpdesk.field_ticket_dashboard__id
+msgid "ID"
+msgstr "ID"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__activity_exception_icon
+msgid "Icon"
+msgstr "Ikona"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,help:sh_helpdesk.field_helpdesk_ticket__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Ikona na označenie aktivity výnimky."
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,help:sh_helpdesk.field_helpdesk_ticket__message_needaction
+#: model:ir.model.fields,help:sh_helpdesk.field_helpdesk_ticket__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "Ak je zaškrtnuté, nové správy si vyžadujú vašu pozornosť."
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,help:sh_helpdesk.field_helpdesk_ticket__message_has_error
+#: model:ir.model.fields,help:sh_helpdesk.field_helpdesk_ticket__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Ak je zaškrtnuté, pri niektorých správach sa vyskytla chyba doručenia."
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,help:sh_helpdesk.field_helpdesk_ticket__active
+msgid ""
+"If unchecked, it will allow you to hide the product without removing it."
+msgstr ""
+"Ak nie je zaškrtnuté, umožní vám skryť produkt bez jeho odstránenia."
+
+#. module: sh_helpdesk
+#. openerp-web
+#: code:addons/sh_helpdesk/static/src/js/helpdesk_ticket_kanban_examples.js:0
+#: model:helpdesk.stages,name:sh_helpdesk.in_progress_stage
+#, python-format
+msgid "In Progress"
+msgstr "Prebieha"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_stages__is_cancel_button_visible
+msgid "Is Cancel Button Visible ?"
+msgstr "Je tlačidlo Zrušiť viditeľné?"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__message_is_follower
+msgid "Is Follower"
+msgstr "Je sledovateľ"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_stages__is_done_button_visible
+msgid "Is Resolved Button Visible ?"
+msgstr "Je tlačidlo vyriešené viditeľné?"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_feedback_page
+msgid ""
+"It looks like you're feeling <span id=\"result\" "
+"onclick=\"updateValue(this)\">happy</span> today.."
+msgstr ""
+"Vyzerá to, že sa dnes cítiš <span id=\"result\" "
+"onclick=\"updateValue(this)\">šťasný</span> .."
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_category____last_update
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_priority____last_update
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_stages____last_update
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_sub_type____last_update
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_subcategory____last_update
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_tags____last_update
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_team____last_update
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket____last_update
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket_type____last_update
+#: model:ir.model.fields,field_description:sh_helpdesk.field_res_company____last_update
+#: model:ir.model.fields,field_description:sh_helpdesk.field_res_config_settings____last_update
+#: model:ir.model.fields,field_description:sh_helpdesk.field_res_users____last_update
+#: model:ir.model.fields,field_description:sh_helpdesk.field_ticket_dashboard____last_update
+msgid "Last Modified on"
+msgstr "Naposledy upravené"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_form_view
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_tree_view
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.portal_my_tickets
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.ticket_dashboard_tbl
+msgid "Last Update Date"
+msgstr "Dátum poslednej aktualizácie"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_category__write_uid
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_priority__write_uid
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_stages__write_uid
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_sub_type__write_uid
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_subcategory__write_uid
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_tags__write_uid
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_team__write_uid
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__write_uid
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket_type__write_uid
+#: model:ir.model.fields,field_description:sh_helpdesk.field_ticket_dashboard__write_uid
+msgid "Last Updated by"
+msgstr "Naposledy aktualizované používateľom"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_category__write_date
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_priority__write_date
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_stages__write_date
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_sub_type__write_date
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_subcategory__write_date
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_tags__write_date
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_team__write_date
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__write_date
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket_type__write_date
+#: model:ir.model.fields,field_description:sh_helpdesk.field_ticket_dashboard__write_date
+msgid "Last Updated on"
+msgstr "Posledná aktualizácia dňa"
+
+#. module: sh_helpdesk
+#: code:addons/sh_helpdesk/controllers/portal.py:0
+#, python-format
+msgid "Last month"
+msgstr "Minulý mesiac"
+
+#. module: sh_helpdesk
+#: code:addons/sh_helpdesk/controllers/portal.py:0
+#, python-format
+msgid "Last week"
+msgstr "Minulý týždeň"
+
+#. module: sh_helpdesk
+#: code:addons/sh_helpdesk/controllers/portal.py:0
+#, python-format
+msgid "Last year"
+msgstr "Minulý rok"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields.selection,name:sh_helpdesk.selection__helpdesk_ticket__priority_new__2
+msgid "Low"
+msgstr "Nízka"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_stages__mail_template_ids
+msgid "Mail Template"
+msgstr "Šablóna mailu"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Hlavná príloha"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__message_has_error
+msgid "Message Delivery error"
+msgstr "Chyba doručenia správy"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__message_ids
+msgid "Messages"
+msgstr "Správy"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_search_view
+msgid "My Ticket"
+msgstr "Môj ticket"
+
+#. module: sh_helpdesk
+#: code:addons/sh_helpdesk/controllers/portal.py:0
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_category__name
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_priority__name
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_stages__name
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_sub_type__name
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_tags__name
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_team__name
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__name
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket_type__name
+#: model:ir.model.fields,field_description:sh_helpdesk.field_ticket_dashboard__name
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.portal_my_tickets
+#, python-format
+msgid "Name"
+msgstr "Názov"
+
+#. module: sh_helpdesk
+#. openerp-web
+#: code:addons/sh_helpdesk/models/helpdesk_ticket.py:0
+#: code:addons/sh_helpdesk/static/src/js/helpdesk_ticket_kanban_examples.js:0
+#: model:helpdesk.stages,name:sh_helpdesk.new_stage
+#, python-format
+msgid "New"
+msgstr "Nový"
+
+#. module: sh_helpdesk
+#: code:addons/sh_helpdesk/controllers/portal.py:0
+#, python-format
+msgid "Newest"
+msgstr "Najnovšie"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Termín nasledujúcej aktivity"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__activity_summary
+msgid "Next Activity Summary"
+msgstr "Zhrnutie ďalšej aktivity"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__activity_type_id
+msgid "Next Activity Type"
+msgstr "Typ ďalšej aktivity"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_stages__sh_next_stage
+msgid "Next Stage"
+msgstr "Ďalšia etapa"
+
+#. module: sh_helpdesk
+#: model_terms:ir.actions.act_window,help:sh_helpdesk.helpdesk_priority_action
+msgid "No Helpdesk Tickets priorities found"
+msgstr "Nenašli sa žiadne priority ticketov technickej podpory"
+
+#. module: sh_helpdesk
+#: code:addons/sh_helpdesk/models/helpdesk_ticket.py:0
+#, python-format
+msgid "No Subject"
+msgstr "Bez predmetu"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_res_company__close_days
+#: model:ir.model.fields,field_description:sh_helpdesk.field_res_config_settings__close_days
+msgid "No of Days"
+msgstr "Počet dní"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields.selection,name:sh_helpdesk.selection__helpdesk_ticket__priority_new__3
+msgid "Normal"
+msgstr "Normálna"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Počet akcií"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__message_has_error_counter
+msgid "Number of errors"
+msgstr "Počet chýb"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,help:sh_helpdesk.field_helpdesk_ticket__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Počet správ, ktoré si vyžadujú akciu"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,help:sh_helpdesk.field_helpdesk_ticket__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Počet správ s chybou doručenia"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,help:sh_helpdesk.field_helpdesk_ticket__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Počet neprečítaných správ"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__open_boolean
+msgid "Open Ticket"
+msgstr "Otvorte ticket"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_form_view
+msgid "Other Information"
+msgstr "Ďalšie informácie"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_subcategory__parent_category_id
+msgid "Parent Category"
+msgstr "Rodičovská kategória"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__partner_id
+msgid "Partner"
+msgstr "Partner"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.portal_my_tickets
+msgid "Partner:"
+msgstr "Partner:"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__person_name
+msgid "Person Name"
+msgstr "Meno osoby"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_res_users__sh_portal_user
+msgid "Portal"
+msgstr "Portál"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_res_users__sh_portal_user_access
+msgid "Portal Access"
+msgstr "Prístup na portál"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__access_url
+msgid "Portal Access URL"
+msgstr "URL prístupu na portál"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields.selection,name:sh_helpdesk.selection__res_users__sh_portal_user_access__leader
+msgid "Portal Leader"
+msgstr "Vedúci portálu"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields.selection,name:sh_helpdesk.selection__res_users__sh_portal_user_access__manager
+msgid "Portal Manager"
+msgstr "Správca portálu"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields.selection,name:sh_helpdesk.selection__res_users__sh_portal_user_access__user
+msgid "Portal Support User"
+msgstr "Používateľ podpory portálu"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_form_view
+msgid "Preview"
+msgstr "Náhľad"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.sh_ticket_dashboard_kanban_view
+msgid "Previous Month"
+msgstr "Predchádzajúci mesiac"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.sh_ticket_dashboard_kanban_view
+msgid "Previous Week"
+msgstr "Predchádzajúci týždeň"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.sh_ticket_dashboard_kanban_view
+msgid "Previous Year"
+msgstr "Predchádzajúci rok"
+
+#. module: sh_helpdesk
+#: code:addons/sh_helpdesk/controllers/portal.py:0
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__priority
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_search_view
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.portal_my_tickets
+#, python-format
+msgid "Priority"
+msgstr "Priorita"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_portal_ticket_template
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_portal_content
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_template
+msgid "Rating"
+msgstr "Hodnotenie"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__rating_bool
+msgid "Rating Setting"
+msgstr "Nastavenie hodnotenia"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_portal_ticket_template
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_template
+msgid "Rating: #{o.priority_new} on 3"
+msgstr "Hodnotenie: # {o.priority_new} dňa 3"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_portal_content
+msgid "Rating: #{ticket.priority_new} on 3"
+msgstr "Hodnotenie: # {ticket.priority_new} dňa 3"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_form_view
+msgid "Re-Open Ticket"
+msgstr "Znovu otvoriť ticket"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_res_company__reopen_stage_id
+#: model:ir.model.fields,field_description:sh_helpdesk.field_res_config_settings__reopen_stage_id
+msgid "Re-Opened Stage"
+msgstr "Znova otvorená etapa"
+
+#. module: sh_helpdesk
+#. openerp-web
+#: code:addons/sh_helpdesk/static/src/js/helpdesk_ticket_kanban_examples.js:0
+#: model:helpdesk.stages,name:sh_helpdesk.reopen_stage
+#, python-format
+msgid "Reopened"
+msgstr "Znovu otvorené"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__reopen_stage_boolean
+msgid "Reopened Stage"
+msgstr "Znovuotvorená etapa"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__replied_date
+msgid "Replied Date"
+msgstr "Dátum odpovede"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__state
+msgid "Replied Status"
+msgstr "Stav odpovede"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_form_view
+msgid "Reply"
+msgstr "Odpovedať"
+
+#. module: sh_helpdesk
+#: code:addons/sh_helpdesk/controllers/portal.py:0
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_search_view
+#, python-format
+msgid "Reply Status"
+msgstr "Stav odpovede"
+
+#. module: sh_helpdesk
+#: model:ir.ui.menu,name:sh_helpdesk.helpdesk_reporting_menu
+msgid "Reporting"
+msgstr "Reporting"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_res_company__done_stage_id
+#: model:ir.model.fields,field_description:sh_helpdesk.field_res_config_settings__done_stage_id
+msgid "Resolved Stage"
+msgstr "Vyriešená etapa"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_form_view
+msgid "Resolved Ticket"
+msgstr "Vyriešený ticket"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__activity_user_id
+msgid "Responsible User"
+msgstr "Zodpovedný užívateľ"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Chyba doručenia SMS"
+
+#. module: sh_helpdesk
+#: code:addons/sh_helpdesk/controllers/portal.py:0
+#, python-format
+msgid "Search in All"
+msgstr "Hľadať vo všetkých"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__access_token
+msgid "Security Token"
+msgstr "Bezpečnostný token"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.portal_my_tickets
+msgid "Select Assign User"
+msgstr "Vyberte možnosť priradiť používateľa"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.portal_my_tickets
+msgid "Select Category"
+msgstr "Vybrať kategóriu"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.sh_ticket_dashboard_kanban_view
+msgid "Select Date"
+msgstr "Vybrať dátum"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.portal_my_tickets
+msgid "Select Priority"
+msgstr "Vybrať prioritu"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.portal_my_tickets
+msgid "Select Sub Category"
+msgstr "Vybrať podkategóriu"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.portal_my_tickets
+msgid "Select Subject"
+msgstr "Vybrať predmet"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.portal_my_tickets
+msgid "Select Team"
+msgstr "Vybrať tím"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_category__sequence
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_priority__sequence
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_stages__sequence
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_subcategory__sequence
+msgid "Sequence"
+msgstr "Postupnosť"
+
+#. module: sh_helpdesk
+#: model:ir.ui.menu,name:sh_helpdesk.menu_config_helpdesk
+msgid "Settings"
+msgstr "Nastavenie"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields.selection,name:sh_helpdesk.selection__helpdesk_ticket__state__staff_replied
+msgid "Staff Replied"
+msgstr "Zamestnanci odpovedali"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__stage_id
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_stages_form_view
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_stages_tree_view
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_search_view
+msgid "Stage"
+msgstr "Etapa"
+
+#. module: sh_helpdesk
+#: code:addons/sh_helpdesk/controllers/portal.py:0
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.portal_my_tickets
+#, python-format
+msgid "Status"
+msgstr "Stav"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,help:sh_helpdesk.field_helpdesk_ticket__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Stav na základe aktivít \n"
+"Platnosť: Termín platnosti už uplynul \n"
+"Dnes: Dátum aktivity je dnes \n"
+"Plánované: Budúce činnosti."
+
+#. module: sh_helpdesk
+#: code:addons/sh_helpdesk/controllers/portal.py:0
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__sub_category_id
+#: model:ir.model.fields,field_description:sh_helpdesk.field_res_company__sub_category
+#: model:ir.model.fields,field_description:sh_helpdesk.field_res_config_settings__sub_category
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_search_view
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.portal_my_tickets
+#, python-format
+msgid "Sub Category"
+msgstr "Podkategória"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_subcategory__name
+msgid "Sub Category Name"
+msgstr "Názov podkategórie"
+
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__sub_category_bool
+msgid "Sub Category Setting"
+msgstr "Nastavenie podkategórie"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_subcategory_view_form
+msgid "SubCategory Name"
+msgstr "Názov podkategórie"
+
+#. module: sh_helpdesk
+#: code:addons/sh_helpdesk/controllers/portal.py:0
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_search_view
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.portal_my_tickets
+#, python-format
+msgid "Subject"
+msgstr "Predmet"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_subject_type_form_view
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_subject_type_tree_view
+msgid "Subject Type"
+msgstr "Typ predmetu"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_feedback_page
+msgid "Submit Feedback"
+msgstr "Odoslať spätnú väzbu"
+
+#. module: sh_helpdesk
+#: model:res.groups,name:sh_helpdesk.helpdesk_group_manager
+msgid "Support Manager"
+msgstr "Manažér podpory"
+
+#. module: sh_helpdesk
+#: model:res.groups,name:sh_helpdesk.helpdesk_group_user
+msgid "Support User"
+msgstr "Používateľ podpory"
+
+#. module: sh_helpdesk
+#: model:ir.model.constraint,message:sh_helpdesk.constraint_helpdesk_tags_name_uniq
+msgid "Tag name already exists!"
+msgstr "Značka už existuje!"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__tag_ids
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_tags_form_view
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_tags_tree_view
+msgid "Tags"
+msgstr "Značky"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__team_id
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_search_view
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.portal_my_tickets
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.sh_ticket_dashboard_kanban_view
+msgid "Team"
+msgstr "Tím"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_team__team_head
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__team_head
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_search_view
+msgid "Team Head"
+msgstr "Vedúci tímu"
+
+#. module: sh_helpdesk
+#: model:res.groups,name:sh_helpdesk.helpdesk_group_team_leader
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.sh_ticket_dashboard_kanban_view
+msgid "Team Leader"
+msgstr "TeamLeader"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_team__team_members
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_team_form_view
+msgid "Team Members"
+msgstr "Členovia tímu"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.ticket_feedback_thank_you
+msgid "Thank you for your valuable feedback to us."
+msgstr "Ďakujeme za vašu cennú spätnú väzbu."
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.ticket_feedback_thank_you
+msgid "Thanks!"
+msgstr "Vďaka!"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.portal_my_tickets
+msgid "There are currently no tickets for your account."
+msgstr "Pre váš účet momentálne nie sú k dispozícii žiadne tickety."
+
+#. module: sh_helpdesk
+#: code:addons/sh_helpdesk/controllers/portal.py:0
+#, python-format
+msgid "This Quarter"
+msgstr "Tento štvrťrok"
+
+#. module: sh_helpdesk
+#: code:addons/sh_helpdesk/controllers/portal.py:0
+#, python-format
+msgid "This month"
+msgstr "Tento mesiac"
+
+#. module: sh_helpdesk
+#: code:addons/sh_helpdesk/controllers/portal.py:0
+#, python-format
+msgid "This week"
+msgstr "Tento týždeň"
+
+#. module: sh_helpdesk
+#: code:addons/sh_helpdesk/controllers/portal.py:0
+#, python-format
+msgid "This year"
+msgstr "Tento rok"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_form_view
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_tree_view
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.portal_my_tickets
+msgid "Ticket"
+msgstr "Ticket"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_res_company__allocation_mail_template_id
+#: model:ir.model.fields,field_description:sh_helpdesk.field_res_config_settings__allocation_mail_template_id
+msgid "Ticket Allocation To User Mail Template"
+msgstr "Mailová šablóna priradenia ticketu používateľovi"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_form_view
+msgid "Ticket Cancelled Information"
+msgstr "Informácie o zrušenom tickete"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_form_view
+msgid "Ticket Closed Information"
+msgstr "Informácie o uzavretom tickete"
+
+#. module: sh_helpdesk
+#: model:ir.actions.act_window,name:sh_helpdesk.sh_action_ticket_dashboard
+#: model:ir.model,name:sh_helpdesk.model_ticket_dashboard
+#: model:ir.ui.menu,name:sh_helpdesk.helpdesk_dashboard_menu
+msgid "Ticket Dashboard"
+msgstr "Informačný panel ticketov"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_config_setting_view
+msgid "Ticket Dashboard Settings"
+msgstr "Nastavenia informačného panelu ticketov"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__ticket_from_portal
+msgid "Ticket From Portal"
+msgstr "Ticket z portálu"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__ticket_from_website
+msgid "Ticket From Website"
+msgstr "Ticket z web stránky"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_config_setting_view
+msgid "Ticket Mail Template Settings"
+msgstr "Nastavenia mail šablóny ticketov"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.ticket_dashboard_tbl
+msgid "Ticket No"
+msgstr "Ticket č."
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_res_company__reply_mail_template_id
+#: model:ir.model.fields,field_description:sh_helpdesk.field_res_config_settings__reply_mail_template_id
+msgid "Ticket Reply Mail Template"
+msgstr "Emailová šablóna pre odpovede na tickety"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_config_setting_view
+msgid "Ticket Settings"
+msgstr "Nastavenia ticketov"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_config_setting_view
+msgid "Ticket Stage Settings"
+msgstr "Nastavenia etáp ticketov"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__subject_id
+msgid "Ticket Subject Type"
+msgstr "Typ predmetu ticketu"
+
+#. module: sh_helpdesk
+#: code:addons/sh_helpdesk/controllers/portal.py:0
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__ticket_type
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_search_view
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_type_form_view
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_type_tree_view
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.portal_my_tickets
+#, python-format
+msgid "Ticket Type"
+msgstr "Typ ticketu"
+
+#. module: sh_helpdesk
+#: model:mail.template,subject:sh_helpdesk.sh_ticket_replay_template
+msgid ""
+"Ticket reply from ${object.company_id.name} (Ref ${object.name or 'n/a' })"
+msgstr ""
+"Odpoveď na ticket od ${object.company_id.name} (Ref ${object.name or 'n/a' })"
+
+#. module: sh_helpdesk
+#: code:addons/sh_helpdesk/controllers/portal.py:0
+#, python-format
+msgid "Ticket viewed by customer %s"
+msgstr "Ticket zobrazený zákazníkom %s"
+
+#. module: sh_helpdesk
+#: code:addons/sh_helpdesk/models/helpdesk_ticket_dashboard.py:0
+#: model:ir.ui.menu,name:sh_helpdesk.helpdesk_tickets_menu
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_calendar
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_graph
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_pivot
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.portal_my_home_menu_ticket
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.portal_my_home_ticket
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.portal_my_tickets
+#, python-format
+msgid "Tickets"
+msgstr "Tickety"
+
+#. module: sh_helpdesk
+#: code:addons/sh_helpdesk/controllers/portal.py:0
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.sh_ticket_dashboard_kanban_view
+#, python-format
+msgid "Today"
+msgstr "Dnes"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,help:sh_helpdesk.field_helpdesk_ticket__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Typ výnimky zaznamenanej aktivity."
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__message_unread
+msgid "Unread Messages"
+msgstr "Neprečítané správy"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Počítadlo neprečítaných správ"
+
+#. module: sh_helpdesk
+#: model:ir.model,name:sh_helpdesk.model_res_users
+msgid "Users"
+msgstr "Používatelia"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields.selection,name:sh_helpdesk.selection__helpdesk_ticket__priority_new__5
+msgid "Very High"
+msgstr "Veľmi vysoká"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields.selection,name:sh_helpdesk.selection__helpdesk_ticket__priority_new__1
+msgid "Very Low"
+msgstr "Veľmi nízka"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,field_description:sh_helpdesk.field_helpdesk_ticket__website_message_ids
+msgid "Website Messages"
+msgstr "Správy z web stránky"
+
+#. module: sh_helpdesk
+#: model:ir.model.fields,help:sh_helpdesk.field_helpdesk_ticket__website_message_ids
+msgid "Website communication history"
+msgstr "História komunikácie z web stránky"
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.sh_ticket_dashboard_kanban_view
+msgid "Yesterday"
+msgstr "Včera"
+
+#. module: sh_helpdesk
+#: code:addons/sh_helpdesk/models/helpdesk_ticket.py:0
+#, python-format
+msgid "You have not access to edit this support request."
+msgstr "Nemáte prístup na úpravu tejto požiadvky."
+
+#. module: sh_helpdesk
+#: model_terms:ir.ui.view,arch_db:sh_helpdesk.helpdesk_ticket_feedback_page
+msgid "Your Feedback"
+msgstr "Vaša spätná väzba"
